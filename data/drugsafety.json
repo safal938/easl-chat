@@ -1,0 +1,731 @@
+{
+  "success": true,
+  "session_id": "session_1753553729908",
+  "analysis_timestamp": "2025-07-26T18:16:22.432541",
+  "extraction_result": {
+    "drugs_found": true,
+    "extracted_drugs": [
+      {
+        "drug_name": "sofosbuvir",
+        "type": "generic",
+        "context": "Part of the fixed-dose combination with velpatasvir (SOF/VEL) recommended for 24 weeks in patients with decompensated cirrhosis and ESRD on hemodialysis."
+      },
+      {
+        "drug_name": "velpatasvir",
+        "type": "generic",
+        "context": "Part of the fixed-dose combination with sofosbuvir (SOF/VEL) recommended for 24 weeks in patients with decompensated cirrhosis and ESRD on hemodialysis."
+      },
+      {
+        "drug_name": "sofosbuvir/velpatasvir",
+        "type": "combination",
+        "context": "Fixed-dose combination regimen recommended as safe and effective for patients with decompensated cirrhosis and ESRD on hemodialysis."
+      },
+      {
+        "drug_name": "ribavirin",
+        "type": "generic",
+        "context": "Mentioned as contraindicated in patients with severe renal impairment or ESRD on hemodialysis due to risk of toxicity and hemolytic anemia."
+      },
+      {
+        "drug_name": "protease inhibitors",
+        "type": "class",
+        "context": "Class of drugs contraindicated in decompensated cirrhosis due to increased drug exposure and risk of hepatic decompensation."
+      },
+      {
+        "drug_name": "voxilaprevir",
+        "type": "generic",
+        "context": "Example of a protease inhibitor-containing regimen contraindicated in decompensated cirrhosis."
+      },
+      {
+        "drug_name": "glecaprevir",
+        "type": "generic",
+        "context": "Example of a protease inhibitor-containing regimen contraindicated in decompensated cirrhosis."
+      }
+    ],
+    "total_drugs": 7,
+    "message": "Extracted seven drug-related entities including generic drugs, a combination medication, and drug classes mentioned in the context of treatment recommendations and contraindications for patients with decompensated cirrhosis and ESRD on hemodialysis."
+  },
+  "safety_analysis": {
+    "total_drugs_analyzed": 3,
+    "analyze_primary_only": false,
+    "drug_analyses": [
+      {
+        "drug_name": "sofosbuvir",
+        "is_primary": true,
+        "drug_type": "generic",
+        "context": "Part of the fixed-dose combination with velpatasvir (SOF/VEL) recommended for 24 weeks in patients with decompensated cirrhosis and ESRD on hemodialysis.",
+        "safety_data": {
+          "analysis_info": {
+            "drug_analyzed": "sofosbuvir",
+            "analysis_date": "2025-07-26T18:15:37.772006",
+            "analysis_type": "comprehensive_fda_safety_analysis"
+          },
+          "adverse_events_data": {
+            "drug_name": "sofosbuvir",
+            "extraction_date": "2025-07-26T18:15:37.770832",
+            "total_cases": 100,
+            "total_reactions": 212,
+            "frequency_analysis": {
+              "top_reactions": {
+                "Off label use": 12,
+                "Nausea": 8,
+                "Fatigue": 8,
+                "Headache": 7,
+                "Hepatic encephalopathy": 6,
+                "Vomiting": 6,
+                "Insomnia": 6,
+                "Ascites": 5,
+                "Erythema": 5,
+                "Pneumonia": 5,
+                "Dyspnoea": 5,
+                "Haemoglobin decreased": 5,
+                "Sepsis": 4,
+                "Haemolytic anaemia": 4,
+                "Pyrexia": 4
+              },
+              "total_unique_reactions": 212,
+              "total_reaction_reports": 347
+            },
+            "severity_analysis": {
+              "serious_cases": 86,
+              "death_cases": 12,
+              "hospitalization_cases": 44,
+              "life_threatening_cases": 3,
+              "disability_cases": 1,
+              "seriousness_rate_percent": 86
+            },
+            "demographic_analysis": {
+              "age_group_distribution": {
+                "Elderly (65+)": 16,
+                "Adult (18-64)": 50,
+                "Unknown": 34
+              },
+              "sex_distribution": {
+                "Male": 56,
+                "Female": 40,
+                "Unknown": 4
+              },
+              "top_countries": {
+                "US": 79,
+                "FR": 7,
+                "CA": 4,
+                "DE": 3,
+                "IT": 2
+              },
+              "cases_with_age_data": 66,
+              "cases_with_sex_data": 100
+            }
+          },
+          "labeling_data": {
+            "drug_name": "sofosbuvir",
+            "extraction_date": "2025-07-26T18:15:37.364628",
+            "labeling_available": true,
+            "indications_and_usage": "1 INDICATIONS AND USAGE VOSEVI is indicated for the treatment of adult patients with chronic hepatitis C virus (HCV) infection without cirrhosis or with compensated cirrhosis (Child-Pugh A) who have [see Dosage and Administration (2.2) and Clinical Studies (14) ]: genotype 1, 2, 3, 4, 5, or 6 infection and have previously been treated with an HCV regimen containing an NS5A inhibitor. genotype 1a or 3 infection and have previously been treated with an HCV regimen containing sofosbuvir without an NS5A inhibitor. Additional benefit of VOSEVI over sofosbuvir/velpatasvir was not shown in adults with genotype 1b, 2, 4, 5, or 6 infection previously treated with sofosbuvir without an NS5A inhibitor. VOSEVI is a fixed-dose combination of sofosbuvir, a hepatitis C virus (HCV) nucleotide analog NS5B polymerase inhibitor, velpatasvir, an HCV NS5A inhibitor, and voxilaprevir, an HCV NS3/4A protease inhibitor, and is indicated for the treatment of adult patients with chronic HCV infection without cirrhosis or with compensated cirrhosis (Child-Pugh A) who have ( 1 , 2.2 , 14 ): genotype 1, 2, 3, 4, 5, or 6 infection and have previously been treated with an HCV regimen containing an NS5A inhibitor. genotype 1a or 3 infection and have previously been treated with an HCV regimen containing sofosbuvir without an NS5A inhibitor. Additional benefit of VOSEVI over sofosbuvir/velpatasvir was not shown in adults with genotype 1b, 2, 4, 5, or 6 infection previously treated with sofosbuvir without an NS5A inhibitor.",
+            "warnings": "Not available",
+            "dosage_and_administration": "2 DOSAGE AND ADMINISTRATION Testing: Prior to initiating VOSEVI, test all patients for HBV infection by measuring HBsAg and anti-HBc. ( 2.1 ) Recommended dosage: One tablet (400 mg of sofosbuvir, 100 mg of velpatasvir, and 100 mg of voxilaprevir) taken orally once daily with food. ( 2.2 ) See recommended treatment regimen and duration in table below ( 2.2 ): Genotype Patients Previously Treated with an HCV Regimen Containing: VOSEVI Duration 1, 2, 3, 4, 5, or 6 An NS5A inhibitor In clinical trials, prior NS5A inhibitor experience included daclatasvir, elbasvir, ledipasvir, ombitasvir, or velpatasvir. 12 weeks 1a or 3 Sofosbuvir without an NS5A inhibitor In clinical trials, prior treatment experience included sofosbuvir with or without any of the following: peginterferon alfa/ribavirin, ribavirin, HCV NS3/4A protease inhibitor (boceprevir, simeprevir, or telaprevir). 12 weeks For patients with renal impairment including end stage renal disease on dialysis, follow the dosage recommendations in the table above. ( 2.3 ) VOSEVI is not recommended in patients with moderate or severe hepatic impairment (Child-Pugh B or C). ( 2.4 , 5.2 ) 2.1 Testing Prior to the Initiation of Therapy Test all patients for evidence of current or prior HBV infection by measuring hepatitis B surface antigen (HBsAg) and hepatitis B core antibody (anti-HBc) before initiating HCV treatment with VOSEVI [see Warnings and Precautions (5.1) ]. 2.2 Recommended Dosage The recommended dosage of VOSEVI is one tablet, taken orally, once daily with food [see Clinical Pharmacology (12.3) ]. One tablet of VOSEVI contains 400 mg of sofosbuvir, 100 mg of velpatasvir, and 100 mg of voxilaprevir. Table 1 shows the recommended treatment regimen and duration based on patient population. Table 1 Recommended Treatment Regimen and Duration in Adults Without Cirrhosis or With Compensated Cirrhosis (Child-Pugh A) Genotype Patients Previously Treated with an HCV Regimen Containing: VOSEVI Duration 1, 2, 3, 4, 5, or 6 An NS5A inhibitor In clinical trials, prior NS5A inhibitor experience included daclatasvir, elbasvir, ledipasvir, ombitasvir, or velpatasvir. 12 weeks 1a or 3 Sofosbuvir without an NS5A inhibitor In clinical trials, prior treatment experience included sofosbuvir with or without any of the following: peginterferon alfa/ribavirin, ribavirin, HCV NS3/4A protease inhibitor (boceprevir, simeprevir, or telaprevir). 12 weeks 2.3 Renal Impairment No dosage adjustment of VOSEVI is recommended in patients with any degree of renal impairment including patients on dialysis [see Use in Specific Populations (8.6) and Clinical Pharmacology (12.3) ]. 2.4 Moderate or Severe Hepatic Impairment VOSEVI is not recommended in patients with moderate or severe hepatic impairment (Child-Pugh B or C) due to higher exposures of voxilaprevir in these patients [see Warnings and Precautions (5.2) , Use in Specific Populations (8.7) , and Clinical Pharmacology (12.3) ].",
+            "contraindications": "4 CONTRAINDICATIONS VOSEVI is contraindicated with rifampin [see Drug Interactions (7.3) , and Clinical Pharmacology (12.3) ]. Coadministration with rifampin. ( 4 )",
+            "adverse_reactions": "6 ADVERSE REACTIONS The following serious adverse reactions are described below and elsewhere in labeling: Serious Symptomatic Bradycardia When Coadministered with Amiodarone [see Warnings and Precautions (5.3) ]. The most common adverse reactions (incidence greater than or equal to 10%, all grades) observed with treatment with VOSEVI for 12 weeks were headache, fatigue, diarrhea, and nausea. ( 6.1 ) To report SUSPECTED ADVERSE REACTIONS, contact Gilead Sciences, Inc. at 1-800-GILEAD-5 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. Adverse Reactions in HCV-Infected Subjects without Cirrhosis or with Compensated Cirrhosis The adverse reactions data for VOSEVI were derived from two Phase 3 clinical trials (POLARIS-1 and POLARIS-4) that evaluated a total of 445 subjects infected with genotype 1, 2, 3, 4, 5, or 6 HCV, without cirrhosis or with compensated cirrhosis (Child-Pugh A), who received VOSEVI for 12 weeks. VOSEVI was studied in placebo- and active-controlled (sofosbuvir/velpatasvir) trials [see Clinical Studies (14.1 and 14.2) ]. The proportion of subjects who permanently discontinued treatment due to adverse events was 0.2% for subjects who received VOSEVI for 12 weeks. The most common adverse reactions (adverse events assessed as causally related by the investigator and at least 10%) were headache, fatigue, diarrhea, and nausea in subjects treated with VOSEVI for 12 weeks. Table 2 lists adverse reactions (adverse events assessed as causally related by the investigator, all grades) observed in at least 5% of subjects receiving 12 weeks of treatment with VOSEVI in the Phase 3 clinical trials. The side-by-side tabulation is to simplify presentation; direct comparison across trials should not be made due to differing trial designs. Table 2 Adverse Reactions (All Grades) Reported in ≥5% of Subjects With HCV Without Cirrhosis or With Compensated Cirrhosis Receiving VOSEVI in POLARIS-1 and POLARIS-4 POLARIS-1 POLARIS-4 VOSEVI 12 weeks (N=263) Placebo 12 weeks (N=152) VOSEVI 12 weeks (N=182) SOF/VEL 12 weeks (N=151) Headache 21% 14% 23% 23% Fatigue 17% 15% 19% 23% Diarrhea 13% 9% 14% 3% Nausea 13% 7% 10% 3% Asthenia 6% 4% 4% 6% Insomnia 6% 3% 3% 1% In POLARIS-1, of the subjects receiving VOSEVI who experienced adverse reactions, 99% were mild or moderate (Grade 1 or 2) in severity. In POLARIS-4, of the subjects receiving VOSEVI who experienced adverse reactions, all the reported adverse reactions were mild or moderate (Grade 1 or 2) in severity. Less Common Adverse Reactions Reported in Clinical Trials The following adverse reactions occurred in less than 5% of subjects without cirrhosis or with compensated cirrhosis treated with VOSEVI for 12 weeks and are included because of a potential causal relationship. Rash: In the POLARIS-1 and POLARIS-4 trials, rash occurred in less than 1% and 2% of subjects treated with VOSEVI, respectively. Rash was reported in 1% of subjects treated with placebo in POLARIS-1 and was not reported by any subject taking sofosbuvir/velpatasvir in POLARIS-4. No serious adverse reactions of rash occurred, and all rashes were mild or moderate in severity. Depression: In the POLARIS-1 and POLARIS-4 trials, depressed mood occurred in less than 1% and 1% of subjects treated with VOSEVI, respectively. Depressed mood was not reported by any subject taking placebo in POLARIS-1 and was reported in 1% of subjects treated with sofosbuvir/velpatasvir in POLARIS-4. No serious adverse reactions of depressed mood occurred and all events were mild or moderate in severity. Laboratory Abnormalities Lipase Elevations: Isolated, asymptomatic lipase elevations of greater than 3×ULN were observed in POLARIS-1 in 2% of subjects treated with VOSEVI and 3% of subjects treated with placebo, and in POLARIS-4 in 2% of subjects treated with VOSEVI and less than 1% of subjects treated with sofosbuvir/velpatasvir. Creatine Kinase: Isolated, asymptomatic creatine kinase elevations greater than or equal to 10×ULN were reported in POLARIS-1 in 1% of subjects treated with VOSEVI and 1% of subjects treated with placebo, and in POLARIS-4 in less than 1% of subjects treated with VOSEVI and no subjects treated with sofosbuvir/velpatasvir. Total bilirubin: Increases in total bilirubin less than or equal to 1.5×ULN were observed in subjects treated with VOSEVI due to inhibition of OATP1B1 and OATP1B3 by voxilaprevir: 4% and 6% of subjects without cirrhosis in POLARIS-1 and POLARIS-4, respectively; and 7% and 13% of subjects with compensated cirrhosis in POLARIS-1 and POLARIS-4, respectively. No subjects experienced jaundice and total bilirubin levels decreased after completing VOSEVI treatment. 6.2 Postmarketing Experience The following adverse reactions have been identified during post approval use of sofosbuvir-containing regimens. Because postmarketing reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure. Hepatobiliary Disorders Hepatic decompensation, hepatic failure with NS3/4A protease inhibitor-containing regimens [see Warnings and Precautions (5.2) ]. Cardiac Disorders Serious symptomatic bradycardia has been reported in patients taking amiodarone who initiated treatment with a sofosbuvir-containing regimen [see Warnings and Precautions (5.3) and Drug Interactions (7.3) ]. Skin and Subcutaneous Tissue Disorders Skin rashes, sometimes with blisters or angioedema-like swelling Angioedema",
+            "drug_interactions": "7 DRUG INTERACTIONS P-gp inducers and/or moderate to strong CYP inducers (e.g., St. John's wort, carbamazepine): May decrease concentrations of sofosbuvir, velpatasvir, and/or voxilaprevir. Use of VOSEVI with P-gp inducers and/or moderate to strong CYP inducers is not recommended. ( 5.4 , 7 ) Consult the full prescribing information prior to use for potential drug interactions. ( 4 , 5.3 , 5.4 , 7 ) Clearance of HCV infection with direct acting antivirals may lead to changes in hepatic function, which may impact safe and effective use of concomitant medications. Frequent monitoring of relevant laboratory parameters (INR or blood glucose) and dose adjustments of certain concomitant medications may be necessary. ( 7.3 ) 7.1 Potential for Other Drugs to Affect VOSEVI Sofosbuvir, velpatasvir, and voxilaprevir are substrates of drug transporters P-gp and BCRP while GS-331007 (predominant circulating metabolite of sofosbuvir) is not. Voxilaprevir is also a substrate of OATP1B1 and OATP1B3. In vitro, slow metabolic turnover of velpatasvir by CYP2B6, CYP2C8, and CYP3A4 and of voxilaprevir by CYP1A2, CYP2C8, and primarily CYP3A4 was observed. Drugs that are inducers of P-gp and/or moderate to strong inducers of CYP2B6, CYP2C8, or CYP3A4 (e.g., St. John's wort, carbamazepine) may significantly decrease plasma concentrations of sofosbuvir, velpatasvir, and/or voxilaprevir leading to reduced therapeutic effect of VOSEVI. The use of these agents with VOSEVI is not recommended [see Warnings and Precautions (5.4) and Clinical Pharmacology (12.3) ]. VOSEVI may be coadministered with P-gp, BCRP, and CYP inhibitors. The use of OATP inhibitors which may substantially increase exposure of voxilaprevir (e.g., cyclosporine) with VOSEVI is not recommended [see Clinical Pharmacology (12.3) ]. 7.2 Potential for VOSEVI to Affect Other Drugs Velpatasvir and voxilaprevir are inhibitors of drug transporters P-gp, BCRP, OATP1B1, and OATP1B3. Velpatasvir is also an inhibitor of OATP2B1. Coadministration of VOSEVI with drugs that are substrates of these transporters may alter the exposure of such drugs. Coadministration of VOSEVI with BCRP substrates (e.g., methotrexate, mitoxantrone, imatinib, irinotecan, lapatinib, rosuvastatin, sulfasalazine, topotecan) is not recommended [see Clinical Pharmacology (12.3) ]. 7.3 Established and Potentially Significant Drug Interactions Clearance of HCV infection with direct acting antivirals may lead to changes in hepatic function, which may impact the safe and effective use of concomitant medications. For example, altered blood glucose control resulting in serious symptomatic hypoglycemia has been reported in diabetic patients in postmarketing case reports and published epidemiological studies. Management of hypoglycemia in these cases required either discontinuation or dose modification of concomitant medications used for diabetes treatment. Frequent monitoring of relevant laboratory parameters (e.g., International Normalized Ratio [INR] in patients taking warfarin, blood glucose levels in diabetic patients) or drug concentrations of concomitant medications such as cytochrome P450 substrates with a narrow therapeutic index (e.g., certain immunosuppressants) is recommended to ensure safe and effective use. Dose adjustments of concomitant medications may be necessary. Table 3 provides a listing of established or potentially clinically significant drug interactions. The drug interactions described are based on studies conducted with either VOSEVI, the components of VOSEVI (sofosbuvir, velpatasvir, and/or voxilaprevir), or are predicted drug interactions that may occur with VOSEVI [see Contraindications (4) , Warnings and Precautions (5.3 , 5.4) , and Clinical Pharmacology (12.3) ]. Table 3 Potentially Significant Drug Interactions: Alteration in Dose or Regimen May Be Recommended Based on Drug Interaction Studies or Predicted Interaction This table is not all inclusive. Concomitant Drug Class: Drug Name Effect on Concentration ↓ = decrease, ↑ = increase. Clinical Effect/Recommendation Acid Reducing Agents: ↓ velpatasvir Velpatasvir solubility decreases as pH increases. Drugs that increase gastric pH are expected to decrease concentration of velpatasvir. Antacids (e.g., aluminum and magnesium hydroxide) Separate antacid and VOSEVI administration by 4 hours. H 2 -receptor antagonists (e.g., famotidine) These interactions have been studied in healthy adults. H 2 -receptor antagonists may be administered simultaneously with or staggered from VOSEVI at a dose that does not exceed doses comparable with famotidine 40 mg twice daily. Proton-pump inhibitors (e.g., omeprazole) Omeprazole 20 mg can be administered with VOSEVI. Use with other proton pump-inhibitors has not been studied. Antiarrhythmics: amiodarone Effect on amiodarone, sofosbuvir, velpatasvir, and voxilaprevir concentrations unknown Coadministration of amiodarone with VOSEVI may result in serious symptomatic bradycardia. The mechanism of this effect is unknown. Coadministration of amiodarone with VOSEVI is not recommended; if coadministration is required, cardiac monitoring is recommended [see Warnings and Precautions (5.3) ]. digoxin ↑ digoxin Therapeutic concentration monitoring of digoxin is recommended when coadministered with VOSEVI. Refer to digoxin prescribing information for monitoring and dose modification recommendations for concentration increases with unclear magnitude. Anticoagulants: dabigatran etexilate ↑ dabigatran Clinical monitoring of dabigatran is recommended when coadministered with VOSEVI. Refer to dabigatran etexilate prescribing information for dose modification recommendations in the setting of moderate renal impairment. Anticonvulsants: carbamazepine phenytoin phenobarbital ↓ sofosbuvir ↓ velpatasvir ↓ voxilaprevir Coadministration is not recommended. Antimycobacterials: rifampin ↓ sofosbuvir ↓ velpatasvir ↑ voxilaprevir (single dose) ↓ voxilaprevir (multiple dose) Coadministration with rifampin is contraindicated [see Contraindications (4) ]. rifabutin rifapentine ↓ sofosbuvir ↓ velpatasvir ↓ voxilaprevir Coadministration is not recommended. Antiretrovirals: atazanavir lopinavir ↑ voxilaprevir Coadministration of VOSEVI with atazanavir- or lopinavir-containing regimens is not recommended. tipranavir/ritonavir ↓ sofosbuvir ↓ velpatasvir Coadministration is not recommended. The effect on voxilaprevir is unknown. efavirenz ↓ velpatasvir ↓ voxilaprevir Coadministration of VOSEVI with efavirenz-containing regimens is not recommended. tenofovir disoproxil fumarate (tenofovir DF) ↑ tenofovir Monitor for tenofovir-associated adverse reactions in patients receiving VOSEVI concomitantly with a regimen containing tenofovir DF. Refer to the prescribing information of the tenofovir DF-containing product for recommendations on renal monitoring. Herbal Supplements: St. John's wort ↓ sofosbuvir ↓ velpatasvir ↓ voxilaprevir Coadministration is not recommended. HMG-CoA Reductase Inhibitors: pravastatin ↑ pravastatin Coadministration of VOSEVI with pravastatin has been shown to increase the concentration of pravastatin, which is associated with increased risk of myopathy, including rhabdomyolysis. Pravastatin may be administered with VOSEVI at a dose that does not exceed pravastatin 40 mg. rosuvastatin ↑ rosuvastatin Coadministration of VOSEVI with rosuvastatin may significantly increase the concentration of rosuvastatin which is associated with increased risk of myopathy, including rhabdomyolysis. Coadministration of VOSEVI with rosuvastatin is not recommended. pitavastatin ↑ pitavastatin Coadministration with VOSEVI may increase the concentration of pitavastatin and is not recommended, due to an increased risk of myopathy, including rhabdomyolysis. atorvastatin fluvastatin lovastatin simvastatin ↑ atorvastatin ↑ fluvastatin ↑ lovastatin ↑ simvastatin Coadministration with VOSEVI may increase the concentrations of atorvastatin, fluvastatin, lovastatin, and simvastatin. Increased statin concentrations may increase the risk of myopathy, including rhabdomyolysis. Use the lowest approved statin dose. If higher doses are needed, use the lowest necessary statin dose based on a risk/benefit assessment. Immunosuppressants: cyclosporine ↑ voxilaprevir Coadministration of voxilaprevir with cyclosporine has been shown to substantially increase the plasma concentration of voxilaprevir, the safety of which has not been established. Coadministration of VOSEVI with cyclosporine is not recommended. 7.4 Drugs without Clinically Significant Interactions with VOSEVI Based on drug interaction studies conducted with the components of VOSEVI (sofosbuvir, velpatasvir, and/or voxilaprevir) or VOSEVI, no clinically significant drug interactions have been observed with the following drugs [see Clinical Pharmacology (12.3) ]: VOSEVI: cobicistat, darunavir, elvitegravir, emtricitabine, ethinyl estradiol/norgestimate, gemfibrozil, rilpivirine, ritonavir, tenofovir alafenamide, voriconazole Sofosbuvir/velpatasvir: dolutegravir, ketoconazole, raltegravir Sofosbuvir: methadone, tacrolimus",
+            "pediatric_use": "8.4 Pediatric Use Safety and effectiveness of VOSEVI have not been established in pediatric patients.",
+            "geriatric_use": "8.5 Geriatric Use Clinical trials of VOSEVI included 74 subjects aged 65 and over (17% of total number of subjects in the POLARIS-1 and POLARIS-4 Phase 3 clinical trials). No overall differences in safety or effectiveness were observed between these subjects and younger subjects, and other reported clinical experience has not identified differences in responses between the elderly and younger patients, but greater sensitivity of some older individuals cannot be ruled out. No dosage adjustment of VOSEVI is warranted in geriatric patients [see Clinical Pharmacology (12.3) ].",
+            "pregnancy": "8.1 Pregnancy Risk Summary No adequate human data are available to establish whether or not VOSEVI poses a risk to pregnancy outcomes. In animal reproduction studies, no evidence of adverse developmental outcomes was observed with the components of VOSEVI (sofosbuvir, velpatasvir, or voxilaprevir) at exposures greater than those in humans at the recommended human dose (RHD) [see Data ] . During organogenesis in the mouse, rat, and rabbit, systemic exposures (AUC) of velpatasvir were approximately 23 (mice), 4 (rats), and 0.5 (rabbits) times the exposure in humans at the RHD, while exposures of voxilaprevir were approximately 141 (rats) and 4 (rabbits) times the exposure in humans at the RHD. Exposures of the predominant circulating metabolite of sofosbuvir (GS-331007) were approximately 6 (rats) and 16 (rabbits) times the exposure in humans at the RHD. In rat pre/postnatal development studies, maternal systemic exposures (AUC) for each component of VOSEVI were approximately 7 (sofosbuvir metabolite GS-331007), 3 (velpatasvir), and 238 (voxilaprevir) times the exposure in humans at the RHD. The background risk of major birth defects and miscarriage for the indicated population is unknown. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2–4% and 15–20%, respectively. Data Sofosbuvir: Sofosbuvir was administered orally to pregnant rats (up to 500 mg/kg/day) and rabbits (up to 300 mg/kg/day) on gestation days 6 to 18 and 6 to 19, respectively, and also to rats (oral doses up to 500 mg/kg/day) from gestation day 6 to lactation/post-partum day 20. No significant effects on embryo-fetal (rats and rabbits) or pre/postnatal (rats) development were observed at the highest doses tested. The systemic exposures (AUC) of the predominant circulating metabolite of sofosbuvir (GS-331007) during gestation were approximately 6 (rats) and 16 (rabbits) times the exposure in humans at the RHD. Velpatasvir: Velpatasvir was administered orally to pregnant mice (up to 1000 mg/kg/day), rats (up to 200 mg/kg/day) and rabbits (up to 300 mg/kg/day) from gestation days 6 to 15, 6 to 17, and 7 to 20, respectively, and also to rats (oral doses up to 200 mg/kg) on gestation day 6 to lactation/post-partum day 20. No significant effects on embryo-fetal (mice, rats, and rabbits) or pre/postnatal (rats) development were observed at the highest doses tested. The systemic exposures (AUC) of velpatasvir during gestation were approximately 23 (mice), 4 (rats), and 0.5 (rabbits) times the exposure in humans at the RHD. Voxilaprevir: Voxilaprevir was administered orally to pregnant rats (up to 100 mg/kg/day) and rabbits (up to 600 mg/kg/day) from gestation days 6 to 17, and 7 to 19, respectively, and also to rats (oral doses up to 100 mg/kg) on gestation day 6 to lactation/post-partum day 20. No significant effects on embryo-fetal (rats and rabbits) or pre/postnatal (rats) development were observed at the highest doses tested. The systemic exposures (AUC) of voxilaprevir during gestation were approximately 141 (rats) and 4 (rabbits) times the exposure in humans at the RHD."
+          },
+          "summary": {
+            "total_adverse_event_cases": 100,
+            "labeling_available": true,
+            "data_sources": [
+              "FDA FAERS API",
+              "FDA Drug Labeling API"
+            ]
+          }
+        }
+      },
+      {
+        "drug_name": "velpatasvir",
+        "is_primary": false,
+        "drug_type": "generic",
+        "context": "Part of the fixed-dose combination with sofosbuvir (SOF/VEL) recommended for 24 weeks in patients with decompensated cirrhosis and ESRD on hemodialysis.",
+        "safety_data": {
+          "analysis_info": {
+            "drug_analyzed": "velpatasvir",
+            "analysis_date": "2025-07-26T18:15:40.296335",
+            "analysis_type": "comprehensive_fda_safety_analysis"
+          },
+          "adverse_events_data": {
+            "drug_name": "velpatasvir",
+            "extraction_date": "2025-07-26T18:15:40.295710",
+            "total_cases": 100,
+            "total_reactions": 244,
+            "frequency_analysis": {
+              "top_reactions": {
+                "Fatigue": 15,
+                "Headache": 11,
+                "Nausea": 9,
+                "Dyspnoea": 8,
+                "Insomnia": 6,
+                "Death": 6,
+                "Pain": 6,
+                "Vomiting": 6,
+                "Drug dose omission": 6,
+                "Ascites": 5,
+                "Anaemia": 5,
+                "Diarrhoea": 5,
+                "Unevaluable event": 5,
+                "Seizure": 4,
+                "Pneumonia": 4
+              },
+              "total_unique_reactions": 244,
+              "total_reaction_reports": 417
+            },
+            "severity_analysis": {
+              "serious_cases": 92,
+              "death_cases": 13,
+              "hospitalization_cases": 41,
+              "life_threatening_cases": 1,
+              "disability_cases": 2,
+              "seriousness_rate_percent": 92
+            },
+            "demographic_analysis": {
+              "age_group_distribution": {
+                "Adult (18-64)": 69,
+                "Unknown": 14,
+                "Elderly (65+)": 17
+              },
+              "sex_distribution": {
+                "Male": 71,
+                "Female": 25
+              },
+              "top_countries": {
+                "US": 77,
+                "CA": 19,
+                "AU": 4
+              },
+              "cases_with_age_data": 86,
+              "cases_with_sex_data": 96
+            }
+          },
+          "labeling_data": {
+            "drug_name": "velpatasvir",
+            "extraction_date": "2025-07-26T18:15:40.128885",
+            "labeling_available": true,
+            "indications_and_usage": "1 INDICATIONS AND USAGE VOSEVI is indicated for the treatment of adult patients with chronic hepatitis C virus (HCV) infection without cirrhosis or with compensated cirrhosis (Child-Pugh A) who have [see Dosage and Administration (2.2) and Clinical Studies (14) ]: genotype 1, 2, 3, 4, 5, or 6 infection and have previously been treated with an HCV regimen containing an NS5A inhibitor. genotype 1a or 3 infection and have previously been treated with an HCV regimen containing sofosbuvir without an NS5A inhibitor. Additional benefit of VOSEVI over sofosbuvir/velpatasvir was not shown in adults with genotype 1b, 2, 4, 5, or 6 infection previously treated with sofosbuvir without an NS5A inhibitor. VOSEVI is a fixed-dose combination of sofosbuvir, a hepatitis C virus (HCV) nucleotide analog NS5B polymerase inhibitor, velpatasvir, an HCV NS5A inhibitor, and voxilaprevir, an HCV NS3/4A protease inhibitor, and is indicated for the treatment of adult patients with chronic HCV infection without cirrhosis or with compensated cirrhosis (Child-Pugh A) who have ( 1 , 2.2 , 14 ): genotype 1, 2, 3, 4, 5, or 6 infection and have previously been treated with an HCV regimen containing an NS5A inhibitor. genotype 1a or 3 infection and have previously been treated with an HCV regimen containing sofosbuvir without an NS5A inhibitor. Additional benefit of VOSEVI over sofosbuvir/velpatasvir was not shown in adults with genotype 1b, 2, 4, 5, or 6 infection previously treated with sofosbuvir without an NS5A inhibitor.",
+            "warnings": "Not available",
+            "dosage_and_administration": "2 DOSAGE AND ADMINISTRATION Testing: Prior to initiating VOSEVI, test all patients for HBV infection by measuring HBsAg and anti-HBc. ( 2.1 ) Recommended dosage: One tablet (400 mg of sofosbuvir, 100 mg of velpatasvir, and 100 mg of voxilaprevir) taken orally once daily with food. ( 2.2 ) See recommended treatment regimen and duration in table below ( 2.2 ): Genotype Patients Previously Treated with an HCV Regimen Containing: VOSEVI Duration 1, 2, 3, 4, 5, or 6 An NS5A inhibitor In clinical trials, prior NS5A inhibitor experience included daclatasvir, elbasvir, ledipasvir, ombitasvir, or velpatasvir. 12 weeks 1a or 3 Sofosbuvir without an NS5A inhibitor In clinical trials, prior treatment experience included sofosbuvir with or without any of the following: peginterferon alfa/ribavirin, ribavirin, HCV NS3/4A protease inhibitor (boceprevir, simeprevir, or telaprevir). 12 weeks For patients with renal impairment including end stage renal disease on dialysis, follow the dosage recommendations in the table above. ( 2.3 ) VOSEVI is not recommended in patients with moderate or severe hepatic impairment (Child-Pugh B or C). ( 2.4 , 5.2 ) 2.1 Testing Prior to the Initiation of Therapy Test all patients for evidence of current or prior HBV infection by measuring hepatitis B surface antigen (HBsAg) and hepatitis B core antibody (anti-HBc) before initiating HCV treatment with VOSEVI [see Warnings and Precautions (5.1) ]. 2.2 Recommended Dosage The recommended dosage of VOSEVI is one tablet, taken orally, once daily with food [see Clinical Pharmacology (12.3) ]. One tablet of VOSEVI contains 400 mg of sofosbuvir, 100 mg of velpatasvir, and 100 mg of voxilaprevir. Table 1 shows the recommended treatment regimen and duration based on patient population. Table 1 Recommended Treatment Regimen and Duration in Adults Without Cirrhosis or With Compensated Cirrhosis (Child-Pugh A) Genotype Patients Previously Treated with an HCV Regimen Containing: VOSEVI Duration 1, 2, 3, 4, 5, or 6 An NS5A inhibitor In clinical trials, prior NS5A inhibitor experience included daclatasvir, elbasvir, ledipasvir, ombitasvir, or velpatasvir. 12 weeks 1a or 3 Sofosbuvir without an NS5A inhibitor In clinical trials, prior treatment experience included sofosbuvir with or without any of the following: peginterferon alfa/ribavirin, ribavirin, HCV NS3/4A protease inhibitor (boceprevir, simeprevir, or telaprevir). 12 weeks 2.3 Renal Impairment No dosage adjustment of VOSEVI is recommended in patients with any degree of renal impairment including patients on dialysis [see Use in Specific Populations (8.6) and Clinical Pharmacology (12.3) ]. 2.4 Moderate or Severe Hepatic Impairment VOSEVI is not recommended in patients with moderate or severe hepatic impairment (Child-Pugh B or C) due to higher exposures of voxilaprevir in these patients [see Warnings and Precautions (5.2) , Use in Specific Populations (8.7) , and Clinical Pharmacology (12.3) ].",
+            "contraindications": "4 CONTRAINDICATIONS VOSEVI is contraindicated with rifampin [see Drug Interactions (7.3) , and Clinical Pharmacology (12.3) ]. Coadministration with rifampin. ( 4 )",
+            "adverse_reactions": "6 ADVERSE REACTIONS The following serious adverse reactions are described below and elsewhere in labeling: Serious Symptomatic Bradycardia When Coadministered with Amiodarone [see Warnings and Precautions (5.3) ]. The most common adverse reactions (incidence greater than or equal to 10%, all grades) observed with treatment with VOSEVI for 12 weeks were headache, fatigue, diarrhea, and nausea. ( 6.1 ) To report SUSPECTED ADVERSE REACTIONS, contact Gilead Sciences, Inc. at 1-800-GILEAD-5 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. Adverse Reactions in HCV-Infected Subjects without Cirrhosis or with Compensated Cirrhosis The adverse reactions data for VOSEVI were derived from two Phase 3 clinical trials (POLARIS-1 and POLARIS-4) that evaluated a total of 445 subjects infected with genotype 1, 2, 3, 4, 5, or 6 HCV, without cirrhosis or with compensated cirrhosis (Child-Pugh A), who received VOSEVI for 12 weeks. VOSEVI was studied in placebo- and active-controlled (sofosbuvir/velpatasvir) trials [see Clinical Studies (14.1 and 14.2) ]. The proportion of subjects who permanently discontinued treatment due to adverse events was 0.2% for subjects who received VOSEVI for 12 weeks. The most common adverse reactions (adverse events assessed as causally related by the investigator and at least 10%) were headache, fatigue, diarrhea, and nausea in subjects treated with VOSEVI for 12 weeks. Table 2 lists adverse reactions (adverse events assessed as causally related by the investigator, all grades) observed in at least 5% of subjects receiving 12 weeks of treatment with VOSEVI in the Phase 3 clinical trials. The side-by-side tabulation is to simplify presentation; direct comparison across trials should not be made due to differing trial designs. Table 2 Adverse Reactions (All Grades) Reported in ≥5% of Subjects With HCV Without Cirrhosis or With Compensated Cirrhosis Receiving VOSEVI in POLARIS-1 and POLARIS-4 POLARIS-1 POLARIS-4 VOSEVI 12 weeks (N=263) Placebo 12 weeks (N=152) VOSEVI 12 weeks (N=182) SOF/VEL 12 weeks (N=151) Headache 21% 14% 23% 23% Fatigue 17% 15% 19% 23% Diarrhea 13% 9% 14% 3% Nausea 13% 7% 10% 3% Asthenia 6% 4% 4% 6% Insomnia 6% 3% 3% 1% In POLARIS-1, of the subjects receiving VOSEVI who experienced adverse reactions, 99% were mild or moderate (Grade 1 or 2) in severity. In POLARIS-4, of the subjects receiving VOSEVI who experienced adverse reactions, all the reported adverse reactions were mild or moderate (Grade 1 or 2) in severity. Less Common Adverse Reactions Reported in Clinical Trials The following adverse reactions occurred in less than 5% of subjects without cirrhosis or with compensated cirrhosis treated with VOSEVI for 12 weeks and are included because of a potential causal relationship. Rash: In the POLARIS-1 and POLARIS-4 trials, rash occurred in less than 1% and 2% of subjects treated with VOSEVI, respectively. Rash was reported in 1% of subjects treated with placebo in POLARIS-1 and was not reported by any subject taking sofosbuvir/velpatasvir in POLARIS-4. No serious adverse reactions of rash occurred, and all rashes were mild or moderate in severity. Depression: In the POLARIS-1 and POLARIS-4 trials, depressed mood occurred in less than 1% and 1% of subjects treated with VOSEVI, respectively. Depressed mood was not reported by any subject taking placebo in POLARIS-1 and was reported in 1% of subjects treated with sofosbuvir/velpatasvir in POLARIS-4. No serious adverse reactions of depressed mood occurred and all events were mild or moderate in severity. Laboratory Abnormalities Lipase Elevations: Isolated, asymptomatic lipase elevations of greater than 3×ULN were observed in POLARIS-1 in 2% of subjects treated with VOSEVI and 3% of subjects treated with placebo, and in POLARIS-4 in 2% of subjects treated with VOSEVI and less than 1% of subjects treated with sofosbuvir/velpatasvir. Creatine Kinase: Isolated, asymptomatic creatine kinase elevations greater than or equal to 10×ULN were reported in POLARIS-1 in 1% of subjects treated with VOSEVI and 1% of subjects treated with placebo, and in POLARIS-4 in less than 1% of subjects treated with VOSEVI and no subjects treated with sofosbuvir/velpatasvir. Total bilirubin: Increases in total bilirubin less than or equal to 1.5×ULN were observed in subjects treated with VOSEVI due to inhibition of OATP1B1 and OATP1B3 by voxilaprevir: 4% and 6% of subjects without cirrhosis in POLARIS-1 and POLARIS-4, respectively; and 7% and 13% of subjects with compensated cirrhosis in POLARIS-1 and POLARIS-4, respectively. No subjects experienced jaundice and total bilirubin levels decreased after completing VOSEVI treatment. 6.2 Postmarketing Experience The following adverse reactions have been identified during post approval use of sofosbuvir-containing regimens. Because postmarketing reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure. Hepatobiliary Disorders Hepatic decompensation, hepatic failure with NS3/4A protease inhibitor-containing regimens [see Warnings and Precautions (5.2) ]. Cardiac Disorders Serious symptomatic bradycardia has been reported in patients taking amiodarone who initiated treatment with a sofosbuvir-containing regimen [see Warnings and Precautions (5.3) and Drug Interactions (7.3) ]. Skin and Subcutaneous Tissue Disorders Skin rashes, sometimes with blisters or angioedema-like swelling Angioedema",
+            "drug_interactions": "7 DRUG INTERACTIONS P-gp inducers and/or moderate to strong CYP inducers (e.g., St. John's wort, carbamazepine): May decrease concentrations of sofosbuvir, velpatasvir, and/or voxilaprevir. Use of VOSEVI with P-gp inducers and/or moderate to strong CYP inducers is not recommended. ( 5.4 , 7 ) Consult the full prescribing information prior to use for potential drug interactions. ( 4 , 5.3 , 5.4 , 7 ) Clearance of HCV infection with direct acting antivirals may lead to changes in hepatic function, which may impact safe and effective use of concomitant medications. Frequent monitoring of relevant laboratory parameters (INR or blood glucose) and dose adjustments of certain concomitant medications may be necessary. ( 7.3 ) 7.1 Potential for Other Drugs to Affect VOSEVI Sofosbuvir, velpatasvir, and voxilaprevir are substrates of drug transporters P-gp and BCRP while GS-331007 (predominant circulating metabolite of sofosbuvir) is not. Voxilaprevir is also a substrate of OATP1B1 and OATP1B3. In vitro, slow metabolic turnover of velpatasvir by CYP2B6, CYP2C8, and CYP3A4 and of voxilaprevir by CYP1A2, CYP2C8, and primarily CYP3A4 was observed. Drugs that are inducers of P-gp and/or moderate to strong inducers of CYP2B6, CYP2C8, or CYP3A4 (e.g., St. John's wort, carbamazepine) may significantly decrease plasma concentrations of sofosbuvir, velpatasvir, and/or voxilaprevir leading to reduced therapeutic effect of VOSEVI. The use of these agents with VOSEVI is not recommended [see Warnings and Precautions (5.4) and Clinical Pharmacology (12.3) ]. VOSEVI may be coadministered with P-gp, BCRP, and CYP inhibitors. The use of OATP inhibitors which may substantially increase exposure of voxilaprevir (e.g., cyclosporine) with VOSEVI is not recommended [see Clinical Pharmacology (12.3) ]. 7.2 Potential for VOSEVI to Affect Other Drugs Velpatasvir and voxilaprevir are inhibitors of drug transporters P-gp, BCRP, OATP1B1, and OATP1B3. Velpatasvir is also an inhibitor of OATP2B1. Coadministration of VOSEVI with drugs that are substrates of these transporters may alter the exposure of such drugs. Coadministration of VOSEVI with BCRP substrates (e.g., methotrexate, mitoxantrone, imatinib, irinotecan, lapatinib, rosuvastatin, sulfasalazine, topotecan) is not recommended [see Clinical Pharmacology (12.3) ]. 7.3 Established and Potentially Significant Drug Interactions Clearance of HCV infection with direct acting antivirals may lead to changes in hepatic function, which may impact the safe and effective use of concomitant medications. For example, altered blood glucose control resulting in serious symptomatic hypoglycemia has been reported in diabetic patients in postmarketing case reports and published epidemiological studies. Management of hypoglycemia in these cases required either discontinuation or dose modification of concomitant medications used for diabetes treatment. Frequent monitoring of relevant laboratory parameters (e.g., International Normalized Ratio [INR] in patients taking warfarin, blood glucose levels in diabetic patients) or drug concentrations of concomitant medications such as cytochrome P450 substrates with a narrow therapeutic index (e.g., certain immunosuppressants) is recommended to ensure safe and effective use. Dose adjustments of concomitant medications may be necessary. Table 3 provides a listing of established or potentially clinically significant drug interactions. The drug interactions described are based on studies conducted with either VOSEVI, the components of VOSEVI (sofosbuvir, velpatasvir, and/or voxilaprevir), or are predicted drug interactions that may occur with VOSEVI [see Contraindications (4) , Warnings and Precautions (5.3 , 5.4) , and Clinical Pharmacology (12.3) ]. Table 3 Potentially Significant Drug Interactions: Alteration in Dose or Regimen May Be Recommended Based on Drug Interaction Studies or Predicted Interaction This table is not all inclusive. Concomitant Drug Class: Drug Name Effect on Concentration ↓ = decrease, ↑ = increase. Clinical Effect/Recommendation Acid Reducing Agents: ↓ velpatasvir Velpatasvir solubility decreases as pH increases. Drugs that increase gastric pH are expected to decrease concentration of velpatasvir. Antacids (e.g., aluminum and magnesium hydroxide) Separate antacid and VOSEVI administration by 4 hours. H 2 -receptor antagonists (e.g., famotidine) These interactions have been studied in healthy adults. H 2 -receptor antagonists may be administered simultaneously with or staggered from VOSEVI at a dose that does not exceed doses comparable with famotidine 40 mg twice daily. Proton-pump inhibitors (e.g., omeprazole) Omeprazole 20 mg can be administered with VOSEVI. Use with other proton pump-inhibitors has not been studied. Antiarrhythmics: amiodarone Effect on amiodarone, sofosbuvir, velpatasvir, and voxilaprevir concentrations unknown Coadministration of amiodarone with VOSEVI may result in serious symptomatic bradycardia. The mechanism of this effect is unknown. Coadministration of amiodarone with VOSEVI is not recommended; if coadministration is required, cardiac monitoring is recommended [see Warnings and Precautions (5.3) ]. digoxin ↑ digoxin Therapeutic concentration monitoring of digoxin is recommended when coadministered with VOSEVI. Refer to digoxin prescribing information for monitoring and dose modification recommendations for concentration increases with unclear magnitude. Anticoagulants: dabigatran etexilate ↑ dabigatran Clinical monitoring of dabigatran is recommended when coadministered with VOSEVI. Refer to dabigatran etexilate prescribing information for dose modification recommendations in the setting of moderate renal impairment. Anticonvulsants: carbamazepine phenytoin phenobarbital ↓ sofosbuvir ↓ velpatasvir ↓ voxilaprevir Coadministration is not recommended. Antimycobacterials: rifampin ↓ sofosbuvir ↓ velpatasvir ↑ voxilaprevir (single dose) ↓ voxilaprevir (multiple dose) Coadministration with rifampin is contraindicated [see Contraindications (4) ]. rifabutin rifapentine ↓ sofosbuvir ↓ velpatasvir ↓ voxilaprevir Coadministration is not recommended. Antiretrovirals: atazanavir lopinavir ↑ voxilaprevir Coadministration of VOSEVI with atazanavir- or lopinavir-containing regimens is not recommended. tipranavir/ritonavir ↓ sofosbuvir ↓ velpatasvir Coadministration is not recommended. The effect on voxilaprevir is unknown. efavirenz ↓ velpatasvir ↓ voxilaprevir Coadministration of VOSEVI with efavirenz-containing regimens is not recommended. tenofovir disoproxil fumarate (tenofovir DF) ↑ tenofovir Monitor for tenofovir-associated adverse reactions in patients receiving VOSEVI concomitantly with a regimen containing tenofovir DF. Refer to the prescribing information of the tenofovir DF-containing product for recommendations on renal monitoring. Herbal Supplements: St. John's wort ↓ sofosbuvir ↓ velpatasvir ↓ voxilaprevir Coadministration is not recommended. HMG-CoA Reductase Inhibitors: pravastatin ↑ pravastatin Coadministration of VOSEVI with pravastatin has been shown to increase the concentration of pravastatin, which is associated with increased risk of myopathy, including rhabdomyolysis. Pravastatin may be administered with VOSEVI at a dose that does not exceed pravastatin 40 mg. rosuvastatin ↑ rosuvastatin Coadministration of VOSEVI with rosuvastatin may significantly increase the concentration of rosuvastatin which is associated with increased risk of myopathy, including rhabdomyolysis. Coadministration of VOSEVI with rosuvastatin is not recommended. pitavastatin ↑ pitavastatin Coadministration with VOSEVI may increase the concentration of pitavastatin and is not recommended, due to an increased risk of myopathy, including rhabdomyolysis. atorvastatin fluvastatin lovastatin simvastatin ↑ atorvastatin ↑ fluvastatin ↑ lovastatin ↑ simvastatin Coadministration with VOSEVI may increase the concentrations of atorvastatin, fluvastatin, lovastatin, and simvastatin. Increased statin concentrations may increase the risk of myopathy, including rhabdomyolysis. Use the lowest approved statin dose. If higher doses are needed, use the lowest necessary statin dose based on a risk/benefit assessment. Immunosuppressants: cyclosporine ↑ voxilaprevir Coadministration of voxilaprevir with cyclosporine has been shown to substantially increase the plasma concentration of voxilaprevir, the safety of which has not been established. Coadministration of VOSEVI with cyclosporine is not recommended. 7.4 Drugs without Clinically Significant Interactions with VOSEVI Based on drug interaction studies conducted with the components of VOSEVI (sofosbuvir, velpatasvir, and/or voxilaprevir) or VOSEVI, no clinically significant drug interactions have been observed with the following drugs [see Clinical Pharmacology (12.3) ]: VOSEVI: cobicistat, darunavir, elvitegravir, emtricitabine, ethinyl estradiol/norgestimate, gemfibrozil, rilpivirine, ritonavir, tenofovir alafenamide, voriconazole Sofosbuvir/velpatasvir: dolutegravir, ketoconazole, raltegravir Sofosbuvir: methadone, tacrolimus",
+            "pediatric_use": "8.4 Pediatric Use Safety and effectiveness of VOSEVI have not been established in pediatric patients.",
+            "geriatric_use": "8.5 Geriatric Use Clinical trials of VOSEVI included 74 subjects aged 65 and over (17% of total number of subjects in the POLARIS-1 and POLARIS-4 Phase 3 clinical trials). No overall differences in safety or effectiveness were observed between these subjects and younger subjects, and other reported clinical experience has not identified differences in responses between the elderly and younger patients, but greater sensitivity of some older individuals cannot be ruled out. No dosage adjustment of VOSEVI is warranted in geriatric patients [see Clinical Pharmacology (12.3) ].",
+            "pregnancy": "8.1 Pregnancy Risk Summary No adequate human data are available to establish whether or not VOSEVI poses a risk to pregnancy outcomes. In animal reproduction studies, no evidence of adverse developmental outcomes was observed with the components of VOSEVI (sofosbuvir, velpatasvir, or voxilaprevir) at exposures greater than those in humans at the recommended human dose (RHD) [see Data ] . During organogenesis in the mouse, rat, and rabbit, systemic exposures (AUC) of velpatasvir were approximately 23 (mice), 4 (rats), and 0.5 (rabbits) times the exposure in humans at the RHD, while exposures of voxilaprevir were approximately 141 (rats) and 4 (rabbits) times the exposure in humans at the RHD. Exposures of the predominant circulating metabolite of sofosbuvir (GS-331007) were approximately 6 (rats) and 16 (rabbits) times the exposure in humans at the RHD. In rat pre/postnatal development studies, maternal systemic exposures (AUC) for each component of VOSEVI were approximately 7 (sofosbuvir metabolite GS-331007), 3 (velpatasvir), and 238 (voxilaprevir) times the exposure in humans at the RHD. The background risk of major birth defects and miscarriage for the indicated population is unknown. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2–4% and 15–20%, respectively. Data Sofosbuvir: Sofosbuvir was administered orally to pregnant rats (up to 500 mg/kg/day) and rabbits (up to 300 mg/kg/day) on gestation days 6 to 18 and 6 to 19, respectively, and also to rats (oral doses up to 500 mg/kg/day) from gestation day 6 to lactation/post-partum day 20. No significant effects on embryo-fetal (rats and rabbits) or pre/postnatal (rats) development were observed at the highest doses tested. The systemic exposures (AUC) of the predominant circulating metabolite of sofosbuvir (GS-331007) during gestation were approximately 6 (rats) and 16 (rabbits) times the exposure in humans at the RHD. Velpatasvir: Velpatasvir was administered orally to pregnant mice (up to 1000 mg/kg/day), rats (up to 200 mg/kg/day) and rabbits (up to 300 mg/kg/day) from gestation days 6 to 15, 6 to 17, and 7 to 20, respectively, and also to rats (oral doses up to 200 mg/kg) on gestation day 6 to lactation/post-partum day 20. No significant effects on embryo-fetal (mice, rats, and rabbits) or pre/postnatal (rats) development were observed at the highest doses tested. The systemic exposures (AUC) of velpatasvir during gestation were approximately 23 (mice), 4 (rats), and 0.5 (rabbits) times the exposure in humans at the RHD. Voxilaprevir: Voxilaprevir was administered orally to pregnant rats (up to 100 mg/kg/day) and rabbits (up to 600 mg/kg/day) from gestation days 6 to 17, and 7 to 19, respectively, and also to rats (oral doses up to 100 mg/kg) on gestation day 6 to lactation/post-partum day 20. No significant effects on embryo-fetal (rats and rabbits) or pre/postnatal (rats) development were observed at the highest doses tested. The systemic exposures (AUC) of voxilaprevir during gestation were approximately 141 (rats) and 4 (rabbits) times the exposure in humans at the RHD."
+          },
+          "summary": {
+            "total_adverse_event_cases": 100,
+            "labeling_available": true,
+            "data_sources": [
+              "FDA FAERS API",
+              "FDA Drug Labeling API"
+            ]
+          }
+        }
+      },
+      {
+        "drug_name": "sofosbuvir/velpatasvir",
+        "is_primary": false,
+        "drug_type": "combination",
+        "context": "Fixed-dose combination regimen recommended as safe and effective for patients with decompensated cirrhosis and ESRD on hemodialysis.",
+        "safety_data": {
+          "analysis_info": {
+            "drug_analyzed": "sofosbuvir/velpatasvir",
+            "analysis_date": "2025-07-26T18:15:44.315595",
+            "analysis_type": "comprehensive_fda_safety_analysis"
+          },
+          "adverse_events_data": {
+            "drug_name": "sofosbuvir/velpatasvir",
+            "extraction_date": "2025-07-26T18:15:44.314357",
+            "total_cases": 100,
+            "total_reactions": 122,
+            "frequency_analysis": {
+              "top_reactions": {
+                "Fatigue": 18,
+                "Headache": 16,
+                "Hepatitis C": 11,
+                "Nausea": 9,
+                "Hepatocellular carcinoma": 7,
+                "Drug ineffective": 6,
+                "Drug interaction": 6,
+                "Acute kidney injury": 5,
+                "Genotype drug resistance test positive": 5,
+                "Anaemia": 4,
+                "Rash": 4,
+                "Pain in extremity": 4,
+                "Treatment failure": 4,
+                "Virologic failure": 4,
+                "Bleeding varicose vein": 4
+              },
+              "total_unique_reactions": 122,
+              "total_reaction_reports": 243
+            },
+            "severity_analysis": {
+              "serious_cases": 56,
+              "death_cases": 2,
+              "hospitalization_cases": 21,
+              "life_threatening_cases": 1,
+              "disability_cases": 0,
+              "seriousness_rate_percent": 56
+            },
+            "demographic_analysis": {
+              "age_group_distribution": {
+                "Adult (18-64)": 64,
+                "Elderly (65+)": 19,
+                "Unknown": 17
+              },
+              "sex_distribution": {
+                "Male": 71,
+                "Female": 23
+              },
+              "top_countries": {
+                "US": 75,
+                "NZ": 9,
+                "IT": 6,
+                "GR": 4,
+                "NL": 2
+              },
+              "cases_with_age_data": 83,
+              "cases_with_sex_data": 94
+            }
+          },
+          "labeling_data": {
+            "drug_name": "sofosbuvir/velpatasvir",
+            "extraction_date": "2025-07-26T18:15:44.129954",
+            "labeling_available": true,
+            "indications_and_usage": "1 INDICATIONS AND USAGE VOSEVI is indicated for the treatment of adult patients with chronic hepatitis C virus (HCV) infection without cirrhosis or with compensated cirrhosis (Child-Pugh A) who have [see Dosage and Administration (2.2) and Clinical Studies (14) ]: genotype 1, 2, 3, 4, 5, or 6 infection and have previously been treated with an HCV regimen containing an NS5A inhibitor. genotype 1a or 3 infection and have previously been treated with an HCV regimen containing sofosbuvir without an NS5A inhibitor. Additional benefit of VOSEVI over sofosbuvir/velpatasvir was not shown in adults with genotype 1b, 2, 4, 5, or 6 infection previously treated with sofosbuvir without an NS5A inhibitor. VOSEVI is a fixed-dose combination of sofosbuvir, a hepatitis C virus (HCV) nucleotide analog NS5B polymerase inhibitor, velpatasvir, an HCV NS5A inhibitor, and voxilaprevir, an HCV NS3/4A protease inhibitor, and is indicated for the treatment of adult patients with chronic HCV infection without cirrhosis or with compensated cirrhosis (Child-Pugh A) who have ( 1 , 2.2 , 14 ): genotype 1, 2, 3, 4, 5, or 6 infection and have previously been treated with an HCV regimen containing an NS5A inhibitor. genotype 1a or 3 infection and have previously been treated with an HCV regimen containing sofosbuvir without an NS5A inhibitor. Additional benefit of VOSEVI over sofosbuvir/velpatasvir was not shown in adults with genotype 1b, 2, 4, 5, or 6 infection previously treated with sofosbuvir without an NS5A inhibitor.",
+            "warnings": "Not available",
+            "dosage_and_administration": "2 DOSAGE AND ADMINISTRATION Testing: Prior to initiating VOSEVI, test all patients for HBV infection by measuring HBsAg and anti-HBc. ( 2.1 ) Recommended dosage: One tablet (400 mg of sofosbuvir, 100 mg of velpatasvir, and 100 mg of voxilaprevir) taken orally once daily with food. ( 2.2 ) See recommended treatment regimen and duration in table below ( 2.2 ): Genotype Patients Previously Treated with an HCV Regimen Containing: VOSEVI Duration 1, 2, 3, 4, 5, or 6 An NS5A inhibitor In clinical trials, prior NS5A inhibitor experience included daclatasvir, elbasvir, ledipasvir, ombitasvir, or velpatasvir. 12 weeks 1a or 3 Sofosbuvir without an NS5A inhibitor In clinical trials, prior treatment experience included sofosbuvir with or without any of the following: peginterferon alfa/ribavirin, ribavirin, HCV NS3/4A protease inhibitor (boceprevir, simeprevir, or telaprevir). 12 weeks For patients with renal impairment including end stage renal disease on dialysis, follow the dosage recommendations in the table above. ( 2.3 ) VOSEVI is not recommended in patients with moderate or severe hepatic impairment (Child-Pugh B or C). ( 2.4 , 5.2 ) 2.1 Testing Prior to the Initiation of Therapy Test all patients for evidence of current or prior HBV infection by measuring hepatitis B surface antigen (HBsAg) and hepatitis B core antibody (anti-HBc) before initiating HCV treatment with VOSEVI [see Warnings and Precautions (5.1) ]. 2.2 Recommended Dosage The recommended dosage of VOSEVI is one tablet, taken orally, once daily with food [see Clinical Pharmacology (12.3) ]. One tablet of VOSEVI contains 400 mg of sofosbuvir, 100 mg of velpatasvir, and 100 mg of voxilaprevir. Table 1 shows the recommended treatment regimen and duration based on patient population. Table 1 Recommended Treatment Regimen and Duration in Adults Without Cirrhosis or With Compensated Cirrhosis (Child-Pugh A) Genotype Patients Previously Treated with an HCV Regimen Containing: VOSEVI Duration 1, 2, 3, 4, 5, or 6 An NS5A inhibitor In clinical trials, prior NS5A inhibitor experience included daclatasvir, elbasvir, ledipasvir, ombitasvir, or velpatasvir. 12 weeks 1a or 3 Sofosbuvir without an NS5A inhibitor In clinical trials, prior treatment experience included sofosbuvir with or without any of the following: peginterferon alfa/ribavirin, ribavirin, HCV NS3/4A protease inhibitor (boceprevir, simeprevir, or telaprevir). 12 weeks 2.3 Renal Impairment No dosage adjustment of VOSEVI is recommended in patients with any degree of renal impairment including patients on dialysis [see Use in Specific Populations (8.6) and Clinical Pharmacology (12.3) ]. 2.4 Moderate or Severe Hepatic Impairment VOSEVI is not recommended in patients with moderate or severe hepatic impairment (Child-Pugh B or C) due to higher exposures of voxilaprevir in these patients [see Warnings and Precautions (5.2) , Use in Specific Populations (8.7) , and Clinical Pharmacology (12.3) ].",
+            "contraindications": "4 CONTRAINDICATIONS VOSEVI is contraindicated with rifampin [see Drug Interactions (7.3) , and Clinical Pharmacology (12.3) ]. Coadministration with rifampin. ( 4 )",
+            "adverse_reactions": "6 ADVERSE REACTIONS The following serious adverse reactions are described below and elsewhere in labeling: Serious Symptomatic Bradycardia When Coadministered with Amiodarone [see Warnings and Precautions (5.3) ]. The most common adverse reactions (incidence greater than or equal to 10%, all grades) observed with treatment with VOSEVI for 12 weeks were headache, fatigue, diarrhea, and nausea. ( 6.1 ) To report SUSPECTED ADVERSE REACTIONS, contact Gilead Sciences, Inc. at 1-800-GILEAD-5 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. Adverse Reactions in HCV-Infected Subjects without Cirrhosis or with Compensated Cirrhosis The adverse reactions data for VOSEVI were derived from two Phase 3 clinical trials (POLARIS-1 and POLARIS-4) that evaluated a total of 445 subjects infected with genotype 1, 2, 3, 4, 5, or 6 HCV, without cirrhosis or with compensated cirrhosis (Child-Pugh A), who received VOSEVI for 12 weeks. VOSEVI was studied in placebo- and active-controlled (sofosbuvir/velpatasvir) trials [see Clinical Studies (14.1 and 14.2) ]. The proportion of subjects who permanently discontinued treatment due to adverse events was 0.2% for subjects who received VOSEVI for 12 weeks. The most common adverse reactions (adverse events assessed as causally related by the investigator and at least 10%) were headache, fatigue, diarrhea, and nausea in subjects treated with VOSEVI for 12 weeks. Table 2 lists adverse reactions (adverse events assessed as causally related by the investigator, all grades) observed in at least 5% of subjects receiving 12 weeks of treatment with VOSEVI in the Phase 3 clinical trials. The side-by-side tabulation is to simplify presentation; direct comparison across trials should not be made due to differing trial designs. Table 2 Adverse Reactions (All Grades) Reported in ≥5% of Subjects With HCV Without Cirrhosis or With Compensated Cirrhosis Receiving VOSEVI in POLARIS-1 and POLARIS-4 POLARIS-1 POLARIS-4 VOSEVI 12 weeks (N=263) Placebo 12 weeks (N=152) VOSEVI 12 weeks (N=182) SOF/VEL 12 weeks (N=151) Headache 21% 14% 23% 23% Fatigue 17% 15% 19% 23% Diarrhea 13% 9% 14% 3% Nausea 13% 7% 10% 3% Asthenia 6% 4% 4% 6% Insomnia 6% 3% 3% 1% In POLARIS-1, of the subjects receiving VOSEVI who experienced adverse reactions, 99% were mild or moderate (Grade 1 or 2) in severity. In POLARIS-4, of the subjects receiving VOSEVI who experienced adverse reactions, all the reported adverse reactions were mild or moderate (Grade 1 or 2) in severity. Less Common Adverse Reactions Reported in Clinical Trials The following adverse reactions occurred in less than 5% of subjects without cirrhosis or with compensated cirrhosis treated with VOSEVI for 12 weeks and are included because of a potential causal relationship. Rash: In the POLARIS-1 and POLARIS-4 trials, rash occurred in less than 1% and 2% of subjects treated with VOSEVI, respectively. Rash was reported in 1% of subjects treated with placebo in POLARIS-1 and was not reported by any subject taking sofosbuvir/velpatasvir in POLARIS-4. No serious adverse reactions of rash occurred, and all rashes were mild or moderate in severity. Depression: In the POLARIS-1 and POLARIS-4 trials, depressed mood occurred in less than 1% and 1% of subjects treated with VOSEVI, respectively. Depressed mood was not reported by any subject taking placebo in POLARIS-1 and was reported in 1% of subjects treated with sofosbuvir/velpatasvir in POLARIS-4. No serious adverse reactions of depressed mood occurred and all events were mild or moderate in severity. Laboratory Abnormalities Lipase Elevations: Isolated, asymptomatic lipase elevations of greater than 3×ULN were observed in POLARIS-1 in 2% of subjects treated with VOSEVI and 3% of subjects treated with placebo, and in POLARIS-4 in 2% of subjects treated with VOSEVI and less than 1% of subjects treated with sofosbuvir/velpatasvir. Creatine Kinase: Isolated, asymptomatic creatine kinase elevations greater than or equal to 10×ULN were reported in POLARIS-1 in 1% of subjects treated with VOSEVI and 1% of subjects treated with placebo, and in POLARIS-4 in less than 1% of subjects treated with VOSEVI and no subjects treated with sofosbuvir/velpatasvir. Total bilirubin: Increases in total bilirubin less than or equal to 1.5×ULN were observed in subjects treated with VOSEVI due to inhibition of OATP1B1 and OATP1B3 by voxilaprevir: 4% and 6% of subjects without cirrhosis in POLARIS-1 and POLARIS-4, respectively; and 7% and 13% of subjects with compensated cirrhosis in POLARIS-1 and POLARIS-4, respectively. No subjects experienced jaundice and total bilirubin levels decreased after completing VOSEVI treatment. 6.2 Postmarketing Experience The following adverse reactions have been identified during post approval use of sofosbuvir-containing regimens. Because postmarketing reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure. Hepatobiliary Disorders Hepatic decompensation, hepatic failure with NS3/4A protease inhibitor-containing regimens [see Warnings and Precautions (5.2) ]. Cardiac Disorders Serious symptomatic bradycardia has been reported in patients taking amiodarone who initiated treatment with a sofosbuvir-containing regimen [see Warnings and Precautions (5.3) and Drug Interactions (7.3) ]. Skin and Subcutaneous Tissue Disorders Skin rashes, sometimes with blisters or angioedema-like swelling Angioedema",
+            "drug_interactions": "7 DRUG INTERACTIONS P-gp inducers and/or moderate to strong CYP inducers (e.g., St. John's wort, carbamazepine): May decrease concentrations of sofosbuvir, velpatasvir, and/or voxilaprevir. Use of VOSEVI with P-gp inducers and/or moderate to strong CYP inducers is not recommended. ( 5.4 , 7 ) Consult the full prescribing information prior to use for potential drug interactions. ( 4 , 5.3 , 5.4 , 7 ) Clearance of HCV infection with direct acting antivirals may lead to changes in hepatic function, which may impact safe and effective use of concomitant medications. Frequent monitoring of relevant laboratory parameters (INR or blood glucose) and dose adjustments of certain concomitant medications may be necessary. ( 7.3 ) 7.1 Potential for Other Drugs to Affect VOSEVI Sofosbuvir, velpatasvir, and voxilaprevir are substrates of drug transporters P-gp and BCRP while GS-331007 (predominant circulating metabolite of sofosbuvir) is not. Voxilaprevir is also a substrate of OATP1B1 and OATP1B3. In vitro, slow metabolic turnover of velpatasvir by CYP2B6, CYP2C8, and CYP3A4 and of voxilaprevir by CYP1A2, CYP2C8, and primarily CYP3A4 was observed. Drugs that are inducers of P-gp and/or moderate to strong inducers of CYP2B6, CYP2C8, or CYP3A4 (e.g., St. John's wort, carbamazepine) may significantly decrease plasma concentrations of sofosbuvir, velpatasvir, and/or voxilaprevir leading to reduced therapeutic effect of VOSEVI. The use of these agents with VOSEVI is not recommended [see Warnings and Precautions (5.4) and Clinical Pharmacology (12.3) ]. VOSEVI may be coadministered with P-gp, BCRP, and CYP inhibitors. The use of OATP inhibitors which may substantially increase exposure of voxilaprevir (e.g., cyclosporine) with VOSEVI is not recommended [see Clinical Pharmacology (12.3) ]. 7.2 Potential for VOSEVI to Affect Other Drugs Velpatasvir and voxilaprevir are inhibitors of drug transporters P-gp, BCRP, OATP1B1, and OATP1B3. Velpatasvir is also an inhibitor of OATP2B1. Coadministration of VOSEVI with drugs that are substrates of these transporters may alter the exposure of such drugs. Coadministration of VOSEVI with BCRP substrates (e.g., methotrexate, mitoxantrone, imatinib, irinotecan, lapatinib, rosuvastatin, sulfasalazine, topotecan) is not recommended [see Clinical Pharmacology (12.3) ]. 7.3 Established and Potentially Significant Drug Interactions Clearance of HCV infection with direct acting antivirals may lead to changes in hepatic function, which may impact the safe and effective use of concomitant medications. For example, altered blood glucose control resulting in serious symptomatic hypoglycemia has been reported in diabetic patients in postmarketing case reports and published epidemiological studies. Management of hypoglycemia in these cases required either discontinuation or dose modification of concomitant medications used for diabetes treatment. Frequent monitoring of relevant laboratory parameters (e.g., International Normalized Ratio [INR] in patients taking warfarin, blood glucose levels in diabetic patients) or drug concentrations of concomitant medications such as cytochrome P450 substrates with a narrow therapeutic index (e.g., certain immunosuppressants) is recommended to ensure safe and effective use. Dose adjustments of concomitant medications may be necessary. Table 3 provides a listing of established or potentially clinically significant drug interactions. The drug interactions described are based on studies conducted with either VOSEVI, the components of VOSEVI (sofosbuvir, velpatasvir, and/or voxilaprevir), or are predicted drug interactions that may occur with VOSEVI [see Contraindications (4) , Warnings and Precautions (5.3 , 5.4) , and Clinical Pharmacology (12.3) ]. Table 3 Potentially Significant Drug Interactions: Alteration in Dose or Regimen May Be Recommended Based on Drug Interaction Studies or Predicted Interaction This table is not all inclusive. Concomitant Drug Class: Drug Name Effect on Concentration ↓ = decrease, ↑ = increase. Clinical Effect/Recommendation Acid Reducing Agents: ↓ velpatasvir Velpatasvir solubility decreases as pH increases. Drugs that increase gastric pH are expected to decrease concentration of velpatasvir. Antacids (e.g., aluminum and magnesium hydroxide) Separate antacid and VOSEVI administration by 4 hours. H 2 -receptor antagonists (e.g., famotidine) These interactions have been studied in healthy adults. H 2 -receptor antagonists may be administered simultaneously with or staggered from VOSEVI at a dose that does not exceed doses comparable with famotidine 40 mg twice daily. Proton-pump inhibitors (e.g., omeprazole) Omeprazole 20 mg can be administered with VOSEVI. Use with other proton pump-inhibitors has not been studied. Antiarrhythmics: amiodarone Effect on amiodarone, sofosbuvir, velpatasvir, and voxilaprevir concentrations unknown Coadministration of amiodarone with VOSEVI may result in serious symptomatic bradycardia. The mechanism of this effect is unknown. Coadministration of amiodarone with VOSEVI is not recommended; if coadministration is required, cardiac monitoring is recommended [see Warnings and Precautions (5.3) ]. digoxin ↑ digoxin Therapeutic concentration monitoring of digoxin is recommended when coadministered with VOSEVI. Refer to digoxin prescribing information for monitoring and dose modification recommendations for concentration increases with unclear magnitude. Anticoagulants: dabigatran etexilate ↑ dabigatran Clinical monitoring of dabigatran is recommended when coadministered with VOSEVI. Refer to dabigatran etexilate prescribing information for dose modification recommendations in the setting of moderate renal impairment. Anticonvulsants: carbamazepine phenytoin phenobarbital ↓ sofosbuvir ↓ velpatasvir ↓ voxilaprevir Coadministration is not recommended. Antimycobacterials: rifampin ↓ sofosbuvir ↓ velpatasvir ↑ voxilaprevir (single dose) ↓ voxilaprevir (multiple dose) Coadministration with rifampin is contraindicated [see Contraindications (4) ]. rifabutin rifapentine ↓ sofosbuvir ↓ velpatasvir ↓ voxilaprevir Coadministration is not recommended. Antiretrovirals: atazanavir lopinavir ↑ voxilaprevir Coadministration of VOSEVI with atazanavir- or lopinavir-containing regimens is not recommended. tipranavir/ritonavir ↓ sofosbuvir ↓ velpatasvir Coadministration is not recommended. The effect on voxilaprevir is unknown. efavirenz ↓ velpatasvir ↓ voxilaprevir Coadministration of VOSEVI with efavirenz-containing regimens is not recommended. tenofovir disoproxil fumarate (tenofovir DF) ↑ tenofovir Monitor for tenofovir-associated adverse reactions in patients receiving VOSEVI concomitantly with a regimen containing tenofovir DF. Refer to the prescribing information of the tenofovir DF-containing product for recommendations on renal monitoring. Herbal Supplements: St. John's wort ↓ sofosbuvir ↓ velpatasvir ↓ voxilaprevir Coadministration is not recommended. HMG-CoA Reductase Inhibitors: pravastatin ↑ pravastatin Coadministration of VOSEVI with pravastatin has been shown to increase the concentration of pravastatin, which is associated with increased risk of myopathy, including rhabdomyolysis. Pravastatin may be administered with VOSEVI at a dose that does not exceed pravastatin 40 mg. rosuvastatin ↑ rosuvastatin Coadministration of VOSEVI with rosuvastatin may significantly increase the concentration of rosuvastatin which is associated with increased risk of myopathy, including rhabdomyolysis. Coadministration of VOSEVI with rosuvastatin is not recommended. pitavastatin ↑ pitavastatin Coadministration with VOSEVI may increase the concentration of pitavastatin and is not recommended, due to an increased risk of myopathy, including rhabdomyolysis. atorvastatin fluvastatin lovastatin simvastatin ↑ atorvastatin ↑ fluvastatin ↑ lovastatin ↑ simvastatin Coadministration with VOSEVI may increase the concentrations of atorvastatin, fluvastatin, lovastatin, and simvastatin. Increased statin concentrations may increase the risk of myopathy, including rhabdomyolysis. Use the lowest approved statin dose. If higher doses are needed, use the lowest necessary statin dose based on a risk/benefit assessment. Immunosuppressants: cyclosporine ↑ voxilaprevir Coadministration of voxilaprevir with cyclosporine has been shown to substantially increase the plasma concentration of voxilaprevir, the safety of which has not been established. Coadministration of VOSEVI with cyclosporine is not recommended. 7.4 Drugs without Clinically Significant Interactions with VOSEVI Based on drug interaction studies conducted with the components of VOSEVI (sofosbuvir, velpatasvir, and/or voxilaprevir) or VOSEVI, no clinically significant drug interactions have been observed with the following drugs [see Clinical Pharmacology (12.3) ]: VOSEVI: cobicistat, darunavir, elvitegravir, emtricitabine, ethinyl estradiol/norgestimate, gemfibrozil, rilpivirine, ritonavir, tenofovir alafenamide, voriconazole Sofosbuvir/velpatasvir: dolutegravir, ketoconazole, raltegravir Sofosbuvir: methadone, tacrolimus",
+            "pediatric_use": "8.4 Pediatric Use Safety and effectiveness of VOSEVI have not been established in pediatric patients.",
+            "geriatric_use": "8.5 Geriatric Use Clinical trials of VOSEVI included 74 subjects aged 65 and over (17% of total number of subjects in the POLARIS-1 and POLARIS-4 Phase 3 clinical trials). No overall differences in safety or effectiveness were observed between these subjects and younger subjects, and other reported clinical experience has not identified differences in responses between the elderly and younger patients, but greater sensitivity of some older individuals cannot be ruled out. No dosage adjustment of VOSEVI is warranted in geriatric patients [see Clinical Pharmacology (12.3) ].",
+            "pregnancy": "8.1 Pregnancy Risk Summary No adequate human data are available to establish whether or not VOSEVI poses a risk to pregnancy outcomes. In animal reproduction studies, no evidence of adverse developmental outcomes was observed with the components of VOSEVI (sofosbuvir, velpatasvir, or voxilaprevir) at exposures greater than those in humans at the recommended human dose (RHD) [see Data ] . During organogenesis in the mouse, rat, and rabbit, systemic exposures (AUC) of velpatasvir were approximately 23 (mice), 4 (rats), and 0.5 (rabbits) times the exposure in humans at the RHD, while exposures of voxilaprevir were approximately 141 (rats) and 4 (rabbits) times the exposure in humans at the RHD. Exposures of the predominant circulating metabolite of sofosbuvir (GS-331007) were approximately 6 (rats) and 16 (rabbits) times the exposure in humans at the RHD. In rat pre/postnatal development studies, maternal systemic exposures (AUC) for each component of VOSEVI were approximately 7 (sofosbuvir metabolite GS-331007), 3 (velpatasvir), and 238 (voxilaprevir) times the exposure in humans at the RHD. The background risk of major birth defects and miscarriage for the indicated population is unknown. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2–4% and 15–20%, respectively. Data Sofosbuvir: Sofosbuvir was administered orally to pregnant rats (up to 500 mg/kg/day) and rabbits (up to 300 mg/kg/day) on gestation days 6 to 18 and 6 to 19, respectively, and also to rats (oral doses up to 500 mg/kg/day) from gestation day 6 to lactation/post-partum day 20. No significant effects on embryo-fetal (rats and rabbits) or pre/postnatal (rats) development were observed at the highest doses tested. The systemic exposures (AUC) of the predominant circulating metabolite of sofosbuvir (GS-331007) during gestation were approximately 6 (rats) and 16 (rabbits) times the exposure in humans at the RHD. Velpatasvir: Velpatasvir was administered orally to pregnant mice (up to 1000 mg/kg/day), rats (up to 200 mg/kg/day) and rabbits (up to 300 mg/kg/day) from gestation days 6 to 15, 6 to 17, and 7 to 20, respectively, and also to rats (oral doses up to 200 mg/kg) on gestation day 6 to lactation/post-partum day 20. No significant effects on embryo-fetal (mice, rats, and rabbits) or pre/postnatal (rats) development were observed at the highest doses tested. The systemic exposures (AUC) of velpatasvir during gestation were approximately 23 (mice), 4 (rats), and 0.5 (rabbits) times the exposure in humans at the RHD. Voxilaprevir: Voxilaprevir was administered orally to pregnant rats (up to 100 mg/kg/day) and rabbits (up to 600 mg/kg/day) from gestation days 6 to 17, and 7 to 19, respectively, and also to rats (oral doses up to 100 mg/kg) on gestation day 6 to lactation/post-partum day 20. No significant effects on embryo-fetal (rats and rabbits) or pre/postnatal (rats) development were observed at the highest doses tested. The systemic exposures (AUC) of voxilaprevir during gestation were approximately 141 (rats) and 4 (rabbits) times the exposure in humans at the RHD."
+          },
+          "summary": {
+            "total_adverse_event_cases": 100,
+            "labeling_available": true,
+            "data_sources": [
+              "FDA FAERS API",
+              "FDA Drug Labeling API"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "drug_interaction_analysis": {
+    "analysis_info": {
+      "total_drugs": 4,
+      "drug_list": [
+        "sofosbuvir",
+        "velpatasvir",
+        "sofosbuvir/velpatasvir",
+        "ribavirin"
+      ],
+      "total_pairs_analyzed": 6,
+      "analysis_date": "2025-07-26T18:16:07.969747",
+      "analysis_type": "rxnorm_multi_drug_interaction_analysis",
+      "status": "completed"
+    },
+    "drug_interactions": [
+      {
+        "analysis_info": {
+          "drug_x": "sofosbuvir",
+          "drug_y": "velpatasvir",
+          "analysis_date": "2025-07-26T18:15:49.068923",
+          "analysis_type": "rxnorm_drug_interaction_analysis",
+          "version": "1.0"
+        },
+        "drug_identifiers": {
+          "drug_x": {
+            "input_name": "sofosbuvir",
+            "rxcui": "1484911",
+            "found": true,
+            "suggestions": []
+          },
+          "drug_y": {
+            "input_name": "velpatasvir",
+            "rxcui": "1799206",
+            "found": true,
+            "suggestions": []
+          }
+        },
+        "drug_properties": {
+          "drug_x": {
+            "rxcui": "1484911",
+            "properties": {
+              "name": "sofosbuvir",
+              "synonym": "",
+              "tty": "IN",
+              "language": "ENG",
+              "rxcui": "1484911"
+            },
+            "status": "success"
+          },
+          "drug_y": {
+            "rxcui": "1799206",
+            "properties": {
+              "name": "velpatasvir",
+              "synonym": "",
+              "tty": "IN",
+              "language": "ENG",
+              "rxcui": "1799206"
+            },
+            "status": "success"
+          }
+        },
+        "interaction_analysis": {
+          "drug_1": "sofosbuvir",
+          "drug_2": "velpatasvir",
+          "interaction_found": false,
+          "severity": "UNKNOWN",
+          "description": "No known interaction in database",
+          "mechanism": "Not available",
+          "clinical_management": "Consult clinical resources for complete interaction check"
+        },
+        "summary": {
+          "both_drugs_found": true,
+          "interaction_severity": "UNKNOWN",
+          "has_known_interaction": false,
+          "requires_monitoring": false
+        }
+      },
+      {
+        "analysis_info": {
+          "drug_x": "sofosbuvir",
+          "drug_y": "sofosbuvir/velpatasvir",
+          "analysis_date": "2025-07-26T18:15:52.784807",
+          "analysis_type": "rxnorm_drug_interaction_analysis",
+          "version": "1.0"
+        },
+        "drug_identifiers": {
+          "drug_x": {
+            "input_name": "sofosbuvir",
+            "rxcui": "1484911",
+            "found": true,
+            "suggestions": []
+          },
+          "drug_y": {
+            "input_name": "sofosbuvir/velpatasvir",
+            "rxcui": "1799211",
+            "found": true,
+            "suggestions": []
+          }
+        },
+        "drug_properties": {
+          "drug_x": {
+            "rxcui": "1484911",
+            "properties": {
+              "name": "sofosbuvir",
+              "synonym": "",
+              "tty": "IN",
+              "language": "ENG",
+              "rxcui": "1484911"
+            },
+            "status": "success"
+          },
+          "drug_y": {
+            "rxcui": "1799211",
+            "properties": {
+              "name": "sofosbuvir / velpatasvir",
+              "synonym": "",
+              "tty": "MIN",
+              "language": "ENG",
+              "rxcui": "1799211"
+            },
+            "status": "success"
+          }
+        },
+        "interaction_analysis": {
+          "drug_1": "sofosbuvir",
+          "drug_2": "sofosbuvir/velpatasvir",
+          "interaction_found": false,
+          "severity": "UNKNOWN",
+          "description": "No known interaction in database",
+          "mechanism": "Not available",
+          "clinical_management": "Consult clinical resources for complete interaction check"
+        },
+        "summary": {
+          "both_drugs_found": true,
+          "interaction_severity": "UNKNOWN",
+          "has_known_interaction": false,
+          "requires_monitoring": false
+        }
+      },
+      {
+        "analysis_info": {
+          "drug_x": "sofosbuvir",
+          "drug_y": "ribavirin",
+          "analysis_date": "2025-07-26T18:15:56.477678",
+          "analysis_type": "rxnorm_drug_interaction_analysis",
+          "version": "1.0"
+        },
+        "drug_identifiers": {
+          "drug_x": {
+            "input_name": "sofosbuvir",
+            "rxcui": "1484911",
+            "found": true,
+            "suggestions": []
+          },
+          "drug_y": {
+            "input_name": "ribavirin",
+            "rxcui": "9344",
+            "found": true,
+            "suggestions": []
+          }
+        },
+        "drug_properties": {
+          "drug_x": {
+            "rxcui": "1484911",
+            "properties": {
+              "name": "sofosbuvir",
+              "synonym": "",
+              "tty": "IN",
+              "language": "ENG",
+              "rxcui": "1484911"
+            },
+            "status": "success"
+          },
+          "drug_y": {
+            "rxcui": "9344",
+            "properties": {
+              "name": "ribavirin",
+              "synonym": "",
+              "tty": "IN",
+              "language": "ENG",
+              "rxcui": "9344"
+            },
+            "status": "success"
+          }
+        },
+        "interaction_analysis": {
+          "drug_1": "sofosbuvir",
+          "drug_2": "ribavirin",
+          "interaction_found": false,
+          "severity": "UNKNOWN",
+          "description": "No known interaction in database",
+          "mechanism": "Not available",
+          "clinical_management": "Consult clinical resources for complete interaction check"
+        },
+        "summary": {
+          "both_drugs_found": true,
+          "interaction_severity": "UNKNOWN",
+          "has_known_interaction": false,
+          "requires_monitoring": false
+        }
+      },
+      {
+        "analysis_info": {
+          "drug_x": "velpatasvir",
+          "drug_y": "sofosbuvir/velpatasvir",
+          "analysis_date": "2025-07-26T18:16:00.144843",
+          "analysis_type": "rxnorm_drug_interaction_analysis",
+          "version": "1.0"
+        },
+        "drug_identifiers": {
+          "drug_x": {
+            "input_name": "velpatasvir",
+            "rxcui": "1799206",
+            "found": true,
+            "suggestions": []
+          },
+          "drug_y": {
+            "input_name": "sofosbuvir/velpatasvir",
+            "rxcui": "1799211",
+            "found": true,
+            "suggestions": []
+          }
+        },
+        "drug_properties": {
+          "drug_x": {
+            "rxcui": "1799206",
+            "properties": {
+              "name": "velpatasvir",
+              "synonym": "",
+              "tty": "IN",
+              "language": "ENG",
+              "rxcui": "1799206"
+            },
+            "status": "success"
+          },
+          "drug_y": {
+            "rxcui": "1799211",
+            "properties": {
+              "name": "sofosbuvir / velpatasvir",
+              "synonym": "",
+              "tty": "MIN",
+              "language": "ENG",
+              "rxcui": "1799211"
+            },
+            "status": "success"
+          }
+        },
+        "interaction_analysis": {
+          "drug_1": "velpatasvir",
+          "drug_2": "sofosbuvir/velpatasvir",
+          "interaction_found": false,
+          "severity": "UNKNOWN",
+          "description": "No known interaction in database",
+          "mechanism": "Not available",
+          "clinical_management": "Consult clinical resources for complete interaction check"
+        },
+        "summary": {
+          "both_drugs_found": true,
+          "interaction_severity": "UNKNOWN",
+          "has_known_interaction": false,
+          "requires_monitoring": false
+        }
+      },
+      {
+        "analysis_info": {
+          "drug_x": "velpatasvir",
+          "drug_y": "ribavirin",
+          "analysis_date": "2025-07-26T18:16:03.836587",
+          "analysis_type": "rxnorm_drug_interaction_analysis",
+          "version": "1.0"
+        },
+        "drug_identifiers": {
+          "drug_x": {
+            "input_name": "velpatasvir",
+            "rxcui": "1799206",
+            "found": true,
+            "suggestions": []
+          },
+          "drug_y": {
+            "input_name": "ribavirin",
+            "rxcui": "9344",
+            "found": true,
+            "suggestions": []
+          }
+        },
+        "drug_properties": {
+          "drug_x": {
+            "rxcui": "1799206",
+            "properties": {
+              "name": "velpatasvir",
+              "synonym": "",
+              "tty": "IN",
+              "language": "ENG",
+              "rxcui": "1799206"
+            },
+            "status": "success"
+          },
+          "drug_y": {
+            "rxcui": "9344",
+            "properties": {
+              "name": "ribavirin",
+              "synonym": "",
+              "tty": "IN",
+              "language": "ENG",
+              "rxcui": "9344"
+            },
+            "status": "success"
+          }
+        },
+        "interaction_analysis": {
+          "drug_1": "velpatasvir",
+          "drug_2": "ribavirin",
+          "interaction_found": false,
+          "severity": "UNKNOWN",
+          "description": "No known interaction in database",
+          "mechanism": "Not available",
+          "clinical_management": "Consult clinical resources for complete interaction check"
+        },
+        "summary": {
+          "both_drugs_found": true,
+          "interaction_severity": "UNKNOWN",
+          "has_known_interaction": false,
+          "requires_monitoring": false
+        }
+      },
+      {
+        "analysis_info": {
+          "drug_x": "sofosbuvir/velpatasvir",
+          "drug_y": "ribavirin",
+          "analysis_date": "2025-07-26T18:16:07.469131",
+          "analysis_type": "rxnorm_drug_interaction_analysis",
+          "version": "1.0"
+        },
+        "drug_identifiers": {
+          "drug_x": {
+            "input_name": "sofosbuvir/velpatasvir",
+            "rxcui": "1799211",
+            "found": true,
+            "suggestions": []
+          },
+          "drug_y": {
+            "input_name": "ribavirin",
+            "rxcui": "9344",
+            "found": true,
+            "suggestions": []
+          }
+        },
+        "drug_properties": {
+          "drug_x": {
+            "rxcui": "1799211",
+            "properties": {
+              "name": "sofosbuvir / velpatasvir",
+              "synonym": "",
+              "tty": "MIN",
+              "language": "ENG",
+              "rxcui": "1799211"
+            },
+            "status": "success"
+          },
+          "drug_y": {
+            "rxcui": "9344",
+            "properties": {
+              "name": "ribavirin",
+              "synonym": "",
+              "tty": "IN",
+              "language": "ENG",
+              "rxcui": "9344"
+            },
+            "status": "success"
+          }
+        },
+        "interaction_analysis": {
+          "drug_1": "sofosbuvir/velpatasvir",
+          "drug_2": "ribavirin",
+          "interaction_found": false,
+          "severity": "UNKNOWN",
+          "description": "No known interaction in database",
+          "mechanism": "Not available",
+          "clinical_management": "Consult clinical resources for complete interaction check"
+        },
+        "summary": {
+          "both_drugs_found": true,
+          "interaction_severity": "UNKNOWN",
+          "has_known_interaction": false,
+          "requires_monitoring": false
+        }
+      }
+    ],
+    "summary": {
+      "total_pairs_analyzed": 6,
+      "high_risk_interactions": 0,
+      "moderate_risk_interactions": 0,
+      "unknown_interactions": 6,
+      "safe_combinations": 0,
+      "highest_risk_level": "LOW",
+      "requires_clinical_review": false
+    },
+    "clinical_alerts": {
+      "high_risk_pairs": [],
+      "moderate_risk_pairs": []
+    }
+  },
+  "general_safety": "Sofosbuvir and velpatasvir, including their fixed-dose combination, have an overall favorable safety profile supported by clinical trials and FDA postmarketing data. They are recommended for use in patients with decompensated cirrhosis and ESRD on hemodialysis, with no dosage adjustment required for renal impairment. Protease inhibitor-containing regimens are contraindicated in decompensated cirrhosis due to increased risk of hepatic decompensation. Ribavirin is contraindicated in severe renal impairment and ESRD due to toxicity risks.",
+  "toxicity_analysis": "Potential toxicity concerns include hepatic encephalopathy, ascites, and hepatic decompensation, particularly with protease inhibitors in decompensated cirrhosis. Hemolytic anemia is a notable risk with ribavirin, especially in patients with renal impairment. Postmarketing reports highlight serious symptomatic bradycardia when coadministered with amiodarone. Elevations in liver enzymes and bilirubin have been observed but are generally mild and reversible. Careful monitoring is warranted in patients with advanced liver disease.",
+  "adverse_events_interpretation": "Common adverse events such as fatigue, headache, nausea, diarrhea, and insomnia are generally mild to moderate and consistent across sofosbuvir, velpatasvir, and their combination. Serious adverse events including hepatic encephalopathy and hepatic failure are rare but clinically significant, especially in patients with advanced liver disease. Deaths reported are likely related to underlying disease severity rather than direct drug toxicity. The low discontinuation rate due to adverse events supports good tolerability.",
+  "drug_interaction_analysis_interpretation": "No known direct drug interactions were identified between sofosbuvir, velpatasvir, their combination, and ribavirin in the analyzed data. However, clinically significant interactions exist with other agents such as amiodarone (risk of bradycardia), P-gp and CYP inducers (which reduce antiviral concentrations), and OATP inhibitors like cyclosporine (which increase voxilaprevir exposure). Acid-reducing agents may decrease velpatasvir absorption and require dosing adjustments. Statins may have increased concentrations and risk of myopathy when coadministered.",
+  "clinical_recommendation": "Use sofosbuvir/velpatasvir as recommended for patients with decompensated cirrhosis and ESRD on hemodialysis, avoiding protease inhibitor-containing regimens in this population. Avoid ribavirin in severe renal impairment due to hemolytic anemia risk. Screen for HBV before initiation and monitor hepatic function closely during therapy. Avoid coadministration with amiodarone or monitor cardiac status if unavoidable. Monitor for drug interactions with acid reducers, statins, and immunosuppressants, adjusting doses as needed. Educate patients on common mild adverse effects and ensure close follow-up for early detection of serious events.",
+  "message": "Combined analysis with comprehensive GPT-4 interpretation completed successfully",
+  "error": null
+}

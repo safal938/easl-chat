@@ -1,0 +1,105 @@
+// Firestore Security Rules for Drug Safety Cache
+// Add these rules to your Firestore security rules
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Drug Safety Cache Collection Rules
+    match /drugSafetyCache/{cacheId} {
+      // Users can only read/write their own cached analyses
+      allow read, write: if request.auth != null 
+        && request.auth.uid == resource.data.userId;
+      
+      // Ensure session isolation on create/update
+      allow create: if request.auth != null 
+        && request.auth.uid == request.resource.data.userId
+        && request.resource.data.chatId is string
+        && request.resource.data.messageId is string
+        && request.resource.data.contentHash is string;
+      
+      // Prevent cross-user data access
+      allow update: if request.auth != null 
+        && request.auth.uid == resource.data.userId
+        && request.auth.uid == request.resource.data.userId;
+    }
+    
+    // Existing user chat rules (maintain existing functionality)
+    match /users/{userId}/chats/{chatId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      
+      match /messages/{messageId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+  }
+}
+
+// Firestore Indexes Required for Optimal Performance
+// Add these composite indexes in the Firebase Console or via Firebase CLI
+
+/*
+Collection: drugSafetyCache
+
+1. Index for user-specific content hash queries:
+   - userId (Ascending)
+   - contentHash (Ascending)
+   - createdAt (Descending)
+
+2. Index for chat-specific queries:
+   - userId (Ascending)
+   - chatId (Ascending)
+   - createdAt (Descending)
+
+3. Index for expired cache cleanup:
+   - expiresAt (Ascending)
+
+4. Index for session isolation validation:
+   - userId (Ascending)
+   - chatId (Ascending)
+   - messageId (Ascending)
+
+Firebase CLI commands to create indexes:
+
+firebase firestore:indexes
+
+Add to firestore.indexes.json:
+{
+  "indexes": [
+    {
+      "collectionGroup": "drugSafetyCache",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "userId", "order": "ASCENDING" },
+        { "fieldPath": "contentHash", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "drugSafetyCache",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "userId", "order": "ASCENDING" },
+        { "fieldPath": "chatId", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "drugSafetyCache",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "expiresAt", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "drugSafetyCache",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "userId", "order": "ASCENDING" },
+        { "fieldPath": "chatId", "order": "ASCENDING" },
+        { "fieldPath": "messageId", "order": "ASCENDING" }
+      ]
+    }
+  ]
+}
+*/

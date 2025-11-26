@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Integration Test</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .header {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      min-width: 300px;
+      padding: 10px 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.2s;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #5568d3;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .iframe-container {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      height: calc(100vh - 200px);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .log {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      max-height: 200px;
+      overflow-y: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .log-entry {
+      margin-bottom: 5px;
+      padding: 5px;
+      border-left: 3px solid #667eea;
+      padding-left: 10px;
+    }
+
+    .log-entry.sent {
+      border-left-color: #4caf50;
+    }
+
+    .log-entry.received {
+      border-left-color: #2196f3;
+    }
+
+    .log-entry.error {
+      border-left-color: #f44336;
+    }
+
+    .timestamp {
+      color: #888;
+      font-size: 11px;
+    }
+
+    .quick-queries {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .quick-query-btn {
+      padding: 6px 12px;
+      background: #f0f0f0;
+      color: #333;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .quick-query-btn:hover {
+      background: #e0e0e0;
+      border-color: #667eea;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎨 Canvas Integration Test</h1>
+      <p>Test iframe communication with EASL app - <strong>Queries are auto-sent to AI</strong></p>
+      
+      <div class="controls">
+        <input 
+          type="text" 
+          id="queryInput" 
+          placeholder="Enter your query here..."
+          value="What are the side effects of aspirin?"
+        />
+        <button onclick="sendQuery()">📤 Send Query</button>
+        <button onclick="clearLog()">🗑️ Clear Log</button>
+      </div>
+
+      <div class="quick-queries">
+        <button class="quick-query-btn" onclick="sendQuickQuery('What are the side effects of aspirin?')">
+          Aspirin Side Effects
+        </button>
+        <button class="quick-query-btn" onclick="sendQuickQuery('Explain drug interactions with warfarin')">
+          Warfarin Interactions
+        </button>
+        <button class="quick-query-btn" onclick="sendQuickQuery('What is the recommended dosage for ibuprofen?')">
+          Ibuprofen Dosage
+        </button>
+        <button class="quick-query-btn" onclick="sendQuickQuery('Tell me about contraindications for metformin')">
+          Metformin Contraindications
+        </button>
+      </div>
+    </div>
+
+    <div class="iframe-container">
+      <iframe 
+        id="easlIframe"
+        src="http://localhost:3000"
+        title="EASL App"
+        allow="clipboard-write"
+      ></iframe>
+    </div>
+
+    <div class="log" id="logContainer">
+      <div class="log-entry">
+        <span class="timestamp">[Ready]</span> Canvas test page loaded. Enter a query and click "Send Query" to test.
+      </div>
+      <div class="log-entry">
+        <span class="timestamp">[Info]</span> Queries sent to EASL are automatically processed and sent to AI (no manual send button click needed).
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const logContainer = document.getElementById('logContainer');
+    const queryInput = document.getElementById('queryInput');
+    const iframe = document.getElementById('easlIframe');
+
+    // Listen for messages from EASL iframe
+    window.addEventListener('message', (event) => {
+      // Accept messages from localhost for testing
+      if (event.origin.includes('localhost')) {
+        if (event.data?.type === 'EASL_RESPONSE') {
+          logMessage('received', `Response from EASL: ${JSON.stringify(event.data.payload, null, 2)}`);
+        }
+      }
+    });
+
+    function sendQuery() {
+      const query = queryInput.value.trim();
+      if (!query) {
+        logMessage('error', 'Please enter a query');
+        return;
+      }
+
+      const message = {
+        type: 'CANVAS_QUERY',
+        payload: {
+          query: query,
+          timestamp: new Date().toISOString(),
+          metadata: {
+            source: 'test-page',
+            test: true
+          }
+        }
+      };
+
+      // Wait for iframe to load
+      if (!iframe.contentWindow) {
+        logMessage('error', 'Iframe not loaded yet. Please wait...');
+        return;
+      }
+
+      iframe.contentWindow.postMessage(message, 'http://localhost:3000');
+      logMessage('sent', `Query sent: "${query}"`);
+    }
+
+    function sendQuickQuery(query) {
+      queryInput.value = query;
+      sendQuery();
+    }
+
+    function logMessage(type, message) {
+      const timestamp = new Date().toLocaleTimeString();
+      const entry = document.createElement('div');
+      entry.className = `log-entry ${type}`;
+      entry.innerHTML = `<span class="timestamp">[${timestamp}]</span> ${message}`;
+      logContainer.appendChild(entry);
+      logContainer.scrollTop = logContainer.scrollHeight;
+    }
+
+    function clearLog() {
+      logContainer.innerHTML = '<div class="log-entry"><span class="timestamp">[Cleared]</span> Log cleared.</div>';
+    }
+
+    // Allow Enter key to send query
+    queryInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        sendQuery();
+      }
+    });
+
+    // Log when iframe loads
+    iframe.addEventListener('load', () => {
+      logMessage('received', 'EASL iframe loaded successfully');
+    });
+  </script>
+</body>
+</html>
