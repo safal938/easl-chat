@@ -11,7 +11,8 @@ function getCorsHeaders(origin: string | null) {
   const allowedOrigins = [
     'https://boardv26.vercel.app',
     'https://boardv27.vercel.app', 
-    'https://boardv28.vercel.app',  // Production Board App
+    'https://boardv28.vercel.app',
+      'https://boardv29.vercel.app',// Production Board App
     'http://localhost:3000',        // Local Board App development
     'http://localhost:3001',        // Alternative local port
   ];
