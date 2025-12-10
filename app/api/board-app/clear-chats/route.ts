@@ -9,7 +9,7 @@ import { adminAuth, adminDb } from '@/lib/firebase-admin';
 function getCorsHeaders(origin: string | null) {
   // Allowed origins
   const allowedOrigins = [
-    'https://boardv26.vercel.app',
+    'https://iso-clinic.vercel.app',
     'https://boardv27.vercel.app', 
     'https://boardv28.vercel.app',
       'https://boardv29.vercel.app',// Production Board App
