@@ -10,9 +10,10 @@ function getCorsHeaders(origin: string | null) {
   // Allowed origins
   const allowedOrigins = [
     'https://iso-clinic.vercel.app',
+    'https://iso-clinic-v2.vercel.app',
     'https://boardv27.vercel.app', 
     'https://boardv28.vercel.app',
-      'https://boardv29.vercel.app',// Production Board App
+    'https://boardv29.vercel.app',// Production Board App
     'http://localhost:3000',        // Local Board App development
     'http://localhost:3001',        // Alternative local port
   ];
