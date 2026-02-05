@@ -13,6 +13,7 @@ function getCorsHeaders(origin: string | null) {
     'https://iso-clinic-v2.vercel.app',
     'https://boardv27.vercel.app', 
     'https://boardv28.vercel.app',
+    'https://iso-clinic-v3-481780815788.europe-west1.run.app',
     'https://boardv29.vercel.app',// Production Board App
     'http://localhost:3000',        // Local Board App development
     'http://localhost:3001',        // Alternative local port
