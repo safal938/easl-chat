@@ -10,6 +10,7 @@ export const CANVAS_CONFIG = {
     'https://boardv27.vercel.app',
     'https://boardv28.vercel.app',
     'https://boardv29.vercel.app',
+    'https://iso-clinic-v3-481780815788.europe-west1.run.app',
     'http://localhost:3000',
     'http://localhost:3001',
     'http://localhost:5173', // Vite default
